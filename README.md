@@ -4,3 +4,4 @@ Android app for LA residents to find healthy meals, workouts, and outdoor activi
 
 Team members:
 * Teagan Mucher
+* Daniel Huth
