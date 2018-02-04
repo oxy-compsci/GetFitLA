@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">GetFitLa</string>
-    <string name="Nutrition_text">Nutrition !</string>
+    <string name="Title">Get Fit L.A</string>
+    <string name="Activities">Activities</string>
+    <string name="Nutrition">Nutrition</string>
+    <string name="Exercise">Exercise</string>
 </resources>

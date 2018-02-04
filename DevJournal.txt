@@ -9,4 +9,11 @@ What may be more problematic right now are technical issues. The Android Studio 
 Right now our largest blocker may be to familiarize ourselves with the XML language and with the Android IDE.
 	
 Technical Questions to be resolved:
--What is the main purpose of the strings.xml file? Why is a new string resource not automatically created in the strings.xml file if I put something in the activity_main.xml file.
+For William:
+-What is the main purpose of the activity_main.xml file? Why is a new string resource not automatically created in the strings.xml file if I put something in the activity_main.xml file? 
+
+Things Learned:
+For William:
+-manipulating color.xml/string.xml
+-constraints for layout
+-how to use design and text views
