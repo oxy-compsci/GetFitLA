@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/Activity_button"
-        android:layout_width="368dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_weight="0.33"
         android:fontFamily="@font/arvo"
@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/Nutrition_button"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:layout_weight="0.33"
@@ -38,8 +38,8 @@
 
     <Button
         android:id="@+id/Exercise_button"
-        android:layout_width="368dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_weight="0.33"
