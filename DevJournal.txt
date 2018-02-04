@@ -2,8 +2,11 @@ WEEK ONE
 	2/3/18 (William)
 The most important thing we’ve done this week is meeting Prof. Raney’s research group. We asked questions about the intended purpose and intended functionality of the app to guide our upcoming work. 
 
-	We can already foresee a potential conflict with what our team and the research group believe will make an effective app. With categories like nutrition, exercise and points of interest along with  additional features to be implemented in each, the app could run the risk of being bloated and/or unfocused. 
+We can already foresee a potential conflict with what our team and the research group believe will make an effective app. With categories like nutrition, exercise and points of interest along with  additional features to be implemented in each, the app could run the risk of being bloated and/or unfocused. 
 
-	What may be more problematic right now are technical issues. The Android Studio IDE has a steep learning curve and has many functions that we have yet to explore. Although most of us have at least run the virtual memory device, one of us has to because of issues with their OS.
+What may be more problematic right now are technical issues. The Android Studio IDE has a steep learning curve and has many functions that we have yet to explore. Although most of us have at least run the virtual memory device, one of us has to because of issues with their OS.
 
-	Right now our largest blocker may be to familiarize ourselves with the XML language and with the Android IDE.
+Right now our largest blocker may be to familiarize ourselves with the XML language and with the Android IDE.
+	
+Technical Questions to be resolved:
+-What is the main purpose of the strings.xml file? Why is a new string resource not automatically created in the strings.xml file if I put something in the activity_main.xml file.
