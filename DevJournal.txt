@@ -17,3 +17,20 @@ For William:
 -manipulating color.xml/string.xml
 -constraints for layout
 -how to use design and text views
+
+
+
+REFLECTION for 2/5/18 (Joey)
+
+Basic project description:
+	Prof. Raney and her research team have developed a website which aims to promote healthier living among Los Angeles residents and, specifically, Los Angeles families. The website provides a variety of easy-to-access resources providing guidelines for both nutrition and exercises. The primary features of the website are a map which has tagged good areas for getting food and working out/hiking around LA and a collection of recipes and quick workout guides which can be searched through with filtered results. Our project is to make a mobile app version of this website which will carry over the same features and improve on them.
+	
+Before and after partner meeting:
+	My idea of what the project was going to entail held pretty constant from before the meeting to after. What I did realize throughout the meeting, however, is that their priorities were a bit different than what I expected. The most iportant thing with the app is not for it to have extremely improved, or new, clever, features, but to make the already-existing content easy to access in the most user-friendly way possible. First and foremost they want the map to be showcased and navigatable in a very intuitive way. The next biggest priority is to be able to find the information you need by running through a series of simple prompts which results in giving you a short list of specific, relevant options (for example: Do you want to workout or exercise? -> How much time do you have to exercise? -> etc). 
+	
+Status:
+	As is the case whenever I start a new kind of computer science work, my inital set of challenges lies in figuring out how to set up the software that I'm going to be working with on my ChromeOS. Android Studio is running fine, but I'm still working on gitKraken and if I can't figure it out by tonight, I'll need to find a different machine to work on for this project. I am really excited for the project and, though we're still establishing how we're going to be doing our work and who will do what, I feel like I'm already getting a good feel for what out first beta should be like and will continue learning how to operate Android Studio to understand how to make those pieces come together.
+	
+User Story 1: A Los Angeles mother of three has some family coming into town for the weekend. She wants to quickly look through nearby options for hiking trails to see if she can plan a healthy Saturday outing for everyone.
+User Story 2: Someone is finishing a shopping trip and, about to head home, realizes they forgot to pick up produce for their salad tonight. They need to quickly see if there is anywhere in the vicinity where they can find fresh, local produce.
+User Story 3: George goes along with a group out during lunch break on work and eats more and less healthy food than he had planned on. Wanting to do something better for his body he wants to quickly plan a workout he can fit into the 30 minutes before he needs to go back to work.
