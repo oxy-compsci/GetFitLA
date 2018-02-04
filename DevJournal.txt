@@ -1,0 +1,9 @@
+WEEK ONE
+	2/3/18 (William)
+The most important thing we’ve done this week is meeting Prof. Raney’s research group. We asked questions about the intended purpose and intended functionality of the app to guide our upcoming work. 
+
+	We can already foresee a potential conflict with what our team and the research group believe will make an effective app. With categories like nutrition, exercise and points of interest along with  additional features to be implemented in each, the app could run the risk of being bloated and/or unfocused. 
+
+	What may be more problematic right now are technical issues. The Android Studio IDE has a steep learning curve and has many functions that we have yet to explore. Although most of us have at least run the virtual memory device, one of us has to because of issues with their OS.
+
+	Right now our largest blocker may be to familiarize ourselves with the XML language and with the Android IDE.
