@@ -46,7 +46,7 @@ User Story 1: A Los Angeles mother of three has some family coming into town for
 User Story 2: Someone is finishing a shopping trip and, about to head home, realizes they forgot to pick up produce for their salad tonight. They need to quickly see if there is anywhere in the vicinity where they can find fresh, local produce.
 User Story 3: George goes along with a group out during lunch break on work and eats more and less healthy food than he had planned on. Wanting to do something better for his body he wants to quickly plan a workout he can fit into the 30 minutes before he needs to go back to work.
  Sty
-Reflection 2/5/18
+Reflection 2/5/18 (Dan)
 
 Basic Project description: 
 	We met with Prof. Raney's research team and were told how to proceed in building the app. The goal of said app is to make exercising and eating healthy more accessible to residents of Los Angeles. To do this, we are expected to build an android app with Spanish and English language options that gives its users three choices. These choices are: Exercise, Nutrition, and Map. The exercise tab will have a collection of simple bodyweight exercises that anybody can do in an office or at home. The nutrition tab will be similar in functionality, it will give a list of healthy recipes that can be cooked in a user specified amount of time. The map options is supposed to be the centerpiece of the app. The map should show a huge variety of things to do around LA including, bike paths, hiking trails, public parks and a plethora of other options. 
