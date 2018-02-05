@@ -1,12 +1,13 @@
 WEEK ONE
-	2/3/18 (William)
+
+2/3/18 (William)
 The most important thing we’ve done this week is meeting Prof. Raney’s research group. We asked questions about the intended purpose and intended functionality of the app to guide our upcoming work. 
 
 We can already foresee a potential conflict with what our team and the research group believe will make an effective app. With categories like nutrition, exercise and points of interest along with  additional features to be implemented in each, the app could run the risk of being bloated and/or unfocused. 
 
 What may be more problematic right now are technical issues. The Android Studio IDE has a steep learning curve and has many functions that we have yet to explore. Although most of us have at least run the virtual memory device, one of us has to because of issues with their OS.
 
-Right now our largest blocker may be to familiarize ourselves with the XML language and with the Android IDE.
+Right now our largest blocker may be to familiarize ourselves with the XML language and with the Android IDE. To save some time, we will use Java and not Kotlin to code our app.
 	
 Technical Questions to be resolved:
 For William:
@@ -17,6 +18,16 @@ For William:
 -manipulating color.xml/string.xml
 -constraints for layout
 -how to use design and text views
+
+Reflection: 
+What is the project:
+	Prof. Raney is trying to get more low income Angelenos to adopt healthy lifestyles. By incorporating an activities map, exercise and recipe guides in an easy to use app on the Android platform, more people will have constant access to website resources. This project will import and streamline the functions of the website to ensure maximum outreach.
+
+What did I think it was going to be:
+	I largely thought that the app was going to emphasize the exercise or recipe portion of the website. Instead what Prof. Raney wants emphasized more is the activities part. Furthermore, I discovered during the meeting that the app is supposed to be more about low income workers rather than the whole of Los Angeles. This narrower audience target will help us immensely as there are already a multitude of health apps that target the mainstream audiences. 
+
+Thoughts about the project:
+I have concerns about how bloated the app may become. The app is trying to accomplish a lot of things so it may eventually suffer from lack of clarity. Worse, the app may become uninteresting to use because it tries to be a jack of all trades but a master of none. Consequently, I am a big fan of trying to narrow down the final content of the app.
 
 
 
@@ -34,3 +45,20 @@ Status:
 User Story 1: A Los Angeles mother of three has some family coming into town for the weekend. She wants to quickly look through nearby options for hiking trails to see if she can plan a healthy Saturday outing for everyone.
 User Story 2: Someone is finishing a shopping trip and, about to head home, realizes they forgot to pick up produce for their salad tonight. They need to quickly see if there is anywhere in the vicinity where they can find fresh, local produce.
 User Story 3: George goes along with a group out during lunch break on work and eats more and less healthy food than he had planned on. Wanting to do something better for his body he wants to quickly plan a workout he can fit into the 30 minutes before he needs to go back to work.
+
+
+REFLECTION for 2/5/18 (Teagan)
+
+Project Description: From Professor Raney's research team, we were tasked with creating an Android app for LA residents that would help them find
+activities around them, exercises, and healthy meals. The app helps guide users to find their perfect workout given time or equipment constraints,
+and meals given time, ingredients, and portability constraints.
+
+Before and after partner meeting: Before the meeting, I think I had a decent idea of what the project was going to entail, and that was, for the most
+part, confirmed at the meeting. However, it became clear during the meeting that they already had a clear idea of how they wanted the app to flow and
+display information. Further, they made it clear that the map showing activities near the user was the most important part of the app.
+
+Status: Currently I feel optimistic about the outcome of the project. I think that, while we have many technical challenges ahead of us, we can deliver
+an attractive, intuitive app for the Prof. Raney and the research team. I want to take the lead on developing the map, which I feel like will be challenging
+but also a great opportunity for me to learn. I like the development team, and think we are already working really well together.
+
+User story: Maria is a single mother with two young boys. She needs to find a recipe for a quick, on-the-go breakfast for her kids.
