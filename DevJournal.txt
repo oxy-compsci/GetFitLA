@@ -1,12 +1,13 @@
 WEEK ONE
-	2/3/18 (William)
+
+2/3/18 (William)
 The most important thing we’ve done this week is meeting Prof. Raney’s research group. We asked questions about the intended purpose and intended functionality of the app to guide our upcoming work. 
 
 We can already foresee a potential conflict with what our team and the research group believe will make an effective app. With categories like nutrition, exercise and points of interest along with  additional features to be implemented in each, the app could run the risk of being bloated and/or unfocused. 
 
 What may be more problematic right now are technical issues. The Android Studio IDE has a steep learning curve and has many functions that we have yet to explore. Although most of us have at least run the virtual memory device, one of us has to because of issues with their OS.
 
-Right now our largest blocker may be to familiarize ourselves with the XML language and with the Android IDE.
+Right now our largest blocker may be to familiarize ourselves with the XML language and with the Android IDE. To save some time, we will use Java and not Kotlin to code our app.
 	
 Technical Questions to be resolved:
 For William:
@@ -17,6 +18,16 @@ For William:
 -manipulating color.xml/string.xml
 -constraints for layout
 -how to use design and text views
+
+Reflection: 
+What is the project:
+	Prof. Raney is trying to get more low income Angelenos to adopt healthy lifestyles. By incorporating an activities map, exercise and recipe guides in an easy to use app on the Android platform, more people will have constant access to website resources. This project will import and streamline the functions of the website to ensure maximum outreach.
+
+What did I think it was going to be:
+	I largely thought that the app was going to emphasize the exercise or recipe portion of the website. Instead what Prof. Raney wants emphasized more is the activities part. Furthermore, I discovered during the meeting that the app is supposed to be more about low income workers rather than the whole of Los Angeles. This narrower audience target will help us immensely as there are already a multitude of health apps that target the mainstream audiences. 
+
+Thoughts about the project:
+I have concerns about how bloated the app may become. The app is trying to accomplish a lot of things so it may eventually suffer from lack of clarity. Worse, the app may become uninteresting to use because it tries to be a jack of all trades but a master of none. Consequently, I am a big fan of trying to narrow down the final content of the app.
 
 
 
