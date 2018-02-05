@@ -59,3 +59,19 @@ Status:
 
 User Story: An LA native is having a rough week at his office and has not had any time to exercise. During his lunch break, he wants to find an exercise that he can do for 5-10 minutes that will help keep him healthy. 
 User Story 2: A college student has decided that she wants to make a change in her life, and start living healthily. She has no experience with any ways to eat healthy,  or work out. 
+
+REFLECTION for 2/5/18 (Teagan)
+
+Project Description: From Professor Raney's research team, we were tasked with creating an Android app for LA residents that would help them find
+activities around them, exercises, and healthy meals. The app helps guide users to find their perfect workout given time or equipment constraints,
+and meals given time, ingredients, and portability constraints.
+
+Before and after partner meeting: Before the meeting, I think I had a decent idea of what the project was going to entail, and that was, for the most
+part, confirmed at the meeting. However, it became clear during the meeting that they already had a clear idea of how they wanted the app to flow and
+display information. Further, they made it clear that the map showing activities near the user was the most important part of the app.
+
+Status: Currently I feel optimistic about the outcome of the project. I think that, while we have many technical challenges ahead of us, we can deliver
+an attractive, intuitive app for the Prof. Raney and the research team. I want to take the lead on developing the map, which I feel like will be challenging
+but also a great opportunity for me to learn. I like the development team, and think we are already working really well together.
+
+User story: Maria is a single mother with two young boys. She needs to find a recipe for a quick, on-the-go breakfast for her kids.
