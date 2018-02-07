@@ -47,6 +47,7 @@
         android:text="@string/Exercise"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="exerciseMethod"/>
 
 </LinearLayout>

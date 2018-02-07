@@ -6,4 +6,6 @@
     <string name="Exercise">Exercise</string>
     <string name="Exercise_page">Sample</string>
     <string name="title_activity_maps">Map</string>
+    <string name="button_equipment">Equipment</string>
+    <string name="button_no_equipment">No Equipment</string>
 </resources>
