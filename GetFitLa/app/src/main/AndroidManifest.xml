@@ -28,10 +28,7 @@
 
         <meta-data
             android:name="preloaded_fonts"
-            android:api_source="com.google.android.geo.API_KEY"
-            android:api_value="AIzaSyAjXhf8OdvlDrKlfZ_FlxaSkl54EJ5qJMo"
-            android:play_source="com.google.android.gms.version"
-            android:play_version="@integer/google_play_services_version"
+
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".Exercise" />
