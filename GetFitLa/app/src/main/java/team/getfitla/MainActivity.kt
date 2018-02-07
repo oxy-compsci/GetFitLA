@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     // Open Map when Map button clicked
     fun openMap(view: View) {
+
         // reminder - look into getting api key restrictions
     }
 
