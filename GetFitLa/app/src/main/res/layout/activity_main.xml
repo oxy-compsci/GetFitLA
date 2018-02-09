@@ -22,7 +22,8 @@
         android:text="@string/Activities"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="mapsMethod"/>
 
     <Button
         android:id="@+id/Nutrition_button"

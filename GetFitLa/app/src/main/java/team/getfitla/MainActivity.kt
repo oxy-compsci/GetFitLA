@@ -14,15 +14,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    // Open Map when Map button clicked
-   // fun openMap(view: View) {
-        // reminder - look into getting api key restrictions
-    //}
     /** Intent for exercise activities
      * starts the exercise activity*/
     fun exerciseMethod(view: View){
         val exerciseIntent = Intent(this,ExerciseActivity::class.java)
         startActivity(exerciseIntent)
+    }
+
+    // Intent for maps activity
+    fun mapsMethod(view: View) {
+        val mapsIntent = Intent(this, MapsActivity::class.java)
+        // launch maps activity
+        startActivity(mapsIntent)
     }
 
 }
