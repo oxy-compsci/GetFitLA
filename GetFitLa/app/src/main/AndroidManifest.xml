@@ -46,14 +46,16 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".ExerciseActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".DisplayEquipmentActivity"
-            android:parentActivityName=".ExerciseActivity"/>
-        <activity android:name=".DisplayNoEquipmentActivity"
-            android:parentActivityName=".ExerciseActivity">
-
-        </activity>
+        <activity
+            android:name=".ExerciseActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DisplayEquipmentActivity"
+            android:parentActivityName=".ExerciseActivity" />
+        <activity
+            android:name=".DisplayNoEquipmentActivity"
+            android:parentActivityName=".ExerciseActivity"></activity>
+        <activity android:name=".NutritionActivity"></activity>
     </application>
 
 </manifest>

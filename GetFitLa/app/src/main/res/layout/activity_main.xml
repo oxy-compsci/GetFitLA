@@ -32,6 +32,7 @@
         android:layout_weight="33.33"
         android:background="@drawable/crab"
         android:fontFamily="@font/arvo"
+        android:onClick="nutritionMethod"
         android:src="@drawable/crab"
         android:text="@string/Nutrition"
         android:textColor="@android:color/white"

@@ -8,4 +8,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="button_equipment">Equipment</string>
     <string name="button_no_equipment">No Equipment</string>
+    <string name="button_breakfast">Breakfast</string>
+    <string name="button_lunch">Lunch</string>
+    <string name="button_dinner">Dinner</string>
 </resources>

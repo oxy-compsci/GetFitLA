@@ -28,4 +28,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(mapsIntent)
     }
 
+    //Intent for that nutrition boi
+    fun nutritionMethod(view: View) {
+        val nutritionIntent = Intent(this, NutritionActivity::class.java)
+        startActivity(nutritionIntent)
+    }
+
 }
