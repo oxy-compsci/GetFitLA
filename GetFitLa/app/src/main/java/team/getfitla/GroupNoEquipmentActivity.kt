@@ -3,10 +3,10 @@ package team.getfitla
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class DisplayEquipmentActivity : AppCompatActivity() {
+class GroupNoEquipmentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_equipment)
+        setContentView(R.layout.activity_group_noequipment_exercise)
     }
 }

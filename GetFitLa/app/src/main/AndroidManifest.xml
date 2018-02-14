@@ -50,12 +50,28 @@
             android:name=".ExerciseActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".DisplayEquipmentActivity"
+            android:name=".EquipmentActivity"
             android:parentActivityName=".ExerciseActivity" />
         <activity
-            android:name=".DisplayNoEquipmentActivity"
-            android:parentActivityName=".ExerciseActivity"></activity>
-        <activity android:name=".NutritionActivity"></activity>
+            android:name=".NoEquipmentActivity"
+            android:parentActivityName=".ExerciseActivity" />
+        <activity
+            android:name=".NutritionActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GroupEquipmentActivity"
+            android:parentActivityName=".EquipmentActivity" />
+        <activity
+            android:name=".IndividualEquipmentActivity"
+            android:parentActivityName=".EquipmentActivity" />
+        <activity
+            android:name=".GroupNoEquipmentActivity"
+            android:parentActivityName=".EquipmentActivity"/>
+        <activity
+            android:name=".IndividualNoEquipmentActivity"
+            android:parentActivityName=".EquipmentActivity">
+
+        </activity>
     </application>
 
 </manifest>

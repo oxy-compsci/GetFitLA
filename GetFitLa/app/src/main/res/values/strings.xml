@@ -11,4 +11,6 @@
     <string name="button_breakfast">Breakfast</string>
     <string name="button_lunch">Lunch</string>
     <string name="button_dinner">Dinner</string>
+    <string name="button_individual_exercise">Individual Activities</string>
+    <string name="button_group_exercise">Group Activities</string>
 </resources>

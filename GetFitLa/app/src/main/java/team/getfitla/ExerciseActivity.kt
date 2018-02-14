@@ -12,12 +12,13 @@ class ExerciseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_exercise)
     }
     fun equipmentMethod(view: View){
-        val equipIntent = Intent(this, DisplayEquipmentActivity:: class.java)
+        val equipIntent = Intent(this, EquipmentActivity:: class.java)
         startActivity(equipIntent)
     }
     fun noEqupmentMethod(view: View){
-        val noEquipIntent = Intent(this, DisplayNoEquipmentActivity::class.java)
+        val noEquipIntent = Intent(this, NoEquipmentActivity::class.java)
         startActivity(noEquipIntent)
     }
+
 }
 
