@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import java.util.*
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,10 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     // Intent for maps activity
     fun mapsMethod(view: View) {
-        val mapsIntent = Intent(this, MapsActivity::class.java)
-        // launch maps activity
+        val mapsIntent = Intent(this,MapsActivity::class.java)
         startActivity(mapsIntent)
     }
+
 
     //Intent for that nutrition boi
     fun nutritionMethod(view: View) {
