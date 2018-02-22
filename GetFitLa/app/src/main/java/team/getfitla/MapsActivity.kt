@@ -15,11 +15,11 @@ import java.io.File
 import java.io.InputStream
 import com.google.maps.android.data.kml.KmlLayer
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
-
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback,
+        GoogleMap.onMarkerClickListener {
 
     private lateinit var mMap: GoogleMap
-
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -30,9 +30,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
     }
 
-
+    override fun onMarkerClick(p0: Marker?) = false
 
     /**
      * Manipulates the map once available.
@@ -46,12 +47,35 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
+        // Centering on user location
+        mMap.getUiSettings().setZoomControlsEnabled(true)
+        mMap.setOnMarkerClickListener(this)
+
+
+        // Add a marker in Los Angeles
         val Losangeles = LatLng(34.0522, -118.2437)
         mMap.addMarker(MarkerOptions().position(Losangeles).title("Marker in LA"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Losangeles, 12.0f))
+
+        //Add KML Layer
         val layer = KmlLayer(mMap, R.raw.engmap, applicationContext)
         layer.addLayerToMap()
-        //Add KML Layer
+
+        setupMap()
+    }
+
+
+    // Adding companion object to request user's permission
+    companion object {
+        private const val LOCATION_PERMISSION_REQUEST_CODE = 1
+    }
+
+    // Check if the user has granted the app permission to access location
+    private fun setupMap() {
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION, LOCATION_PERMISSION_REQUEST_CODE))
+            return
+        }
+
     }
 }
