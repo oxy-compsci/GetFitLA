@@ -15,12 +15,6 @@ import java.io.File
 import java.io.InputStream
 import com.google.maps.android.data.kml.KmlLayer
 
-
-
-
-
-
-
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
