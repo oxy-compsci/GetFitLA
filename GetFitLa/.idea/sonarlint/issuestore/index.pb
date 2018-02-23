@@ -55,3 +55,5 @@ _
 /app/src/main/java/team/getfitla/MapsActivity.kt,d/a/dabbb9df2f006cdbb15f44df0e4160759bb5e66a
 X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+K
+app/src/main/res/raw/engmap,e/a/eaa4b6e0228c26f19095664fe64d3620a2b506fe
