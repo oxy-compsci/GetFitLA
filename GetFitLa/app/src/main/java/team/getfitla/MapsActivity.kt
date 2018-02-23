@@ -84,6 +84,7 @@ class MapsActivity() : AppCompatActivity(), OnMapReadyCallback,
             }
 
         } else {
+
         }
 
         // enable the my-location layer
@@ -96,7 +97,7 @@ class MapsActivity() : AppCompatActivity(), OnMapReadyCallback,
             if (location != null) {
                 lastLocation = location
                 val currentLatLng = LatLng(location.latitude, location.longitude)
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 14f))
             }
         }
 
