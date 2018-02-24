@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/Heading"
+            android:id="@+id/textViewHead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="1px"
@@ -21,7 +21,7 @@
             tools:layout_editor_absoluteY="58dp" />
 
         <TextView
-            android:id="@+id/Description"
+            android:id="@+id/textViewDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="1px"

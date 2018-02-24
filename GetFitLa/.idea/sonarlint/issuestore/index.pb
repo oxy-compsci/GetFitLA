@@ -37,8 +37,6 @@ p
 @app/src/main/java/team/getfitla/IndividualNoEquipmentActivity.kt,5/3/5336aa666d35a728faadcfdc17846a3791bb95f9
 t
 Dapp/src/main/res/layout/activity_individual_noequipment_exercise.xml,9/f/9f7b765943f525160d9ad8c106bf6d8526d31ac9
-f
-6app/src/main/java/team/getfitla/NoEquipmentActivity.kt,2/9/29bb88d55893d3d1a775c8272be66937ffa3db48
 \
 ,app/src/debug/res/values/google_maps_api.xml,c/7/c7ab7bac149c0f83f3f9611a0eb8fdce1aaf3aee
 R
@@ -57,3 +55,9 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 K
 app/src/main/res/raw/engmap,e/a/eaa4b6e0228c26f19095664fe64d3620a2b506fe
+U
+%app/src/main/res/layout/list_item.xml,0/e/0e2dbde10fa21a69e5da23f2681513bb29e1a4c4
+g
+7app/src/main/java/team/getfitla/Exercise_List_item.java,4/3/43078e0911319657a40a5a9502f0aa43207aa6e9
+e
+5app/src/main/java/team/getfitla/Exercise_adaptor.java,7/2/7261bdf361bf54fb41f0cb8fcaa2b4bd1425cbf4

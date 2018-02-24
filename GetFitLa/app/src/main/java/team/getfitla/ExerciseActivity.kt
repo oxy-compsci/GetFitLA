@@ -7,15 +7,15 @@ import android.view.View
 
 class ExerciseActivity : AppCompatActivity() {
 
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
     }
 
-    fun onListFragmentInteractionListener(){
 
-
-    }
 
 
 }
