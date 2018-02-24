@@ -11,14 +11,12 @@ class ExerciseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
     }
-    fun equipmentMethod(view: View){
-        val equipIntent = Intent(this, EquipmentActivity:: class.java)
-        startActivity(equipIntent)
+
+    fun onListFragmentInteractionListener(){
+
+
     }
-    fun noEqupmentMethod(view: View){
-        val noEquipIntent = Intent(this, NoEquipmentActivity::class.java)
-        startActivity(noEquipIntent)
-    }
+
 
 }
 

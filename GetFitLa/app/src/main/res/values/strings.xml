@@ -13,4 +13,6 @@
     <string name="button_dinner">Dinner</string>
     <string name="button_individual_exercise">Individual Activities</string>
     <string name="button_group_exercise">Group Activities</string>
+    <string name="Heading">OMG HERE Is MY TITLE</string>
+    <string name="exercise_description">Exercise Description goes here</string>
 </resources>
