@@ -57,3 +57,11 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 K
 app/src/main/res/raw/engmap,e/a/eaa4b6e0228c26f19095664fe64d3620a2b506fe
+W
+'app/src/main/java/team/getfitla/user.kt,e/5/e55c28b81e5390e6d0cd032fb03de480a4d7483c
+W
+'app/src/main/res/layout/list_layout.xml,6/6/66409a5ab4feac50d38275e0b69273717029601c
+g
+7app/src/main/java/team/getfitla/Exercise_adaptor_new.kt,2/b/2bb607abc4f056fb1bab959e32b1dd7629e4a1df
+d
+4app/src/main/java/team/getfitla/Nutrition_adaptor.kt,0/0/006f9aa5e3cc94266727f4fc8f88ed41e39603c2

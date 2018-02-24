@@ -9,7 +9,7 @@ import android.widget.TextView
 /**
  * Created by Work on 2/24/18.
  */
-class Exercise_adaptor_new(val userList: ArrayList<User>) : RecyclerView.Adapter<Exercise_adaptor_new.ViewHolder>() {
+class Nutrition_adaptor(val userList: ArrayList<User>) : RecyclerView.Adapter<Nutrition_adaptor.ViewHolder>() {
     override fun onBindViewHolder(p0: ViewHolder?, p1: Int){
         val user: User = userList[p1]
         p0?.textViewName?.text = user.name
