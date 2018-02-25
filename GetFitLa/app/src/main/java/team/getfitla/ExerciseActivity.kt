@@ -22,6 +22,21 @@ class ExerciseActivity : AppCompatActivity() {
         val users = ArrayList<User>()
         users.add(User("William Chen", "Shanghai Chiba"))
         users.add(User("Will Ch", "Beijing, China"))
+        users.add(User("William Chen", "Shanghai Chiba"))
+        users.add(User("Will Ch", "Beijing, China"))
+        users.add(User("William Chen", "Shanghai Chiba"))
+        users.add(User("Will Ch", "Beijing, China"))
+        users.add(User("William Chen", "Shanghai Chiba"))
+        users.add(User("Will Ch", "Beijing, China"))
+        users.add(User("William Chen", "Shanghai Chiba"))
+        users.add(User("Will Ch", "Beijing, China"))
+        users.add(User("William Chen", "Shanghai Chiba"))
+        users.add(User("Will Ch", "Beijing, China"))
+        users.add(User("William Chen", "Shanghai Chiba"))
+        users.add(User("Will Ch", "Beijing, China"))
+
+
+
 
 
         val adapter = Exercise_adaptor_new(users)
