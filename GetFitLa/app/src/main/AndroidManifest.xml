@@ -30,7 +30,6 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -46,17 +45,14 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
-            android:parentActivityName=".MainActivity" >
-        </activity>
-
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".ExerciseActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".NutritionActivity"
             android:parentActivityName=".MainActivity" />
-
+        <activity android:name=".ExerciseHardCode"></activity>
     </application>
 
 </manifest>

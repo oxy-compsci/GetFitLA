@@ -1,6 +1,7 @@
 package team.getfitla
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextPaint
@@ -35,8 +36,8 @@ class ExerciseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
         // temporary description for showcase
-        listNotes.add(Note(0,"Arrays are indexed at 0", TempDescription))
-        listNotes.add(Note(1,"baseball",TempDescription))
+        listNotes.add(Note(0,"Squats", TempDescription))
+       /** listNotes.add(Note(1,"baseball",TempDescription))
         listNotes.add(Note(2,"Basketball", TempDescription))
         listNotes.add(Note(3,"Football", TempDescription))
         listNotes.add(Note(4,"Frisbee",TempDescription))
@@ -77,11 +78,14 @@ class ExerciseActivity : AppCompatActivity() {
         listNotes.add(Note(39,"Punches", TempDescription))
         listNotes.add(Note(40,"Step Ups", TempDescription))
         listNotes.add(Note(41,"Wall Sit", TempDescription))
+       */
 
         var notesAdapter = NotesAdapter(this, listNotes)
         lvNotes.adapter = notesAdapter
         lvNotes.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, position, id ->
-            Toast.makeText(this, "Click on " + listNotes[position].title, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Click on " + listNotes[position].title, Toast.LENGTH_SHORT).show()
+            val hardcodeIntent = Intent(this,ExerciseHardCode::class.java)
+            startActivity(hardcodeIntent)
         }
 
     }
