@@ -57,3 +57,5 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 K
 app/src/main/res/raw/engmap,e/a/eaa4b6e0228c26f19095664fe64d3620a2b506fe
+^
+.app/src/main/res/layout/activity_nutrition.xml,7/7/77b91595e3fbf20207a2b0f0272bc94c47585078
