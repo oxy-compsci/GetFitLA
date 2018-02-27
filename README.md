@@ -6,3 +6,4 @@ Team Members:
 * Teagan Mucher
 * Joey Sortino
 * Daniel Huth
+* William Chen
