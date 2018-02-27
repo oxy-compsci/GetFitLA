@@ -55,6 +55,9 @@
         <activity
             android:name=".ExerciseHardCode"
             android:parentActivityName=".ExerciseActivity"></activity>
+        <activity
+            android:name=".NutritionHardCode"
+            android:parentActivityName=".NutritionActivity" />
     </application>
 
 </manifest>
