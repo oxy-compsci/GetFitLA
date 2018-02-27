@@ -143,5 +143,6 @@ class ExerciseActivity : AppCompatActivity() {
 //            this.tvTitle = view?.findViewById<TextView>(R.id.tvTitle) as TextView
 //            this.tvContent = view?.findViewById<TextView>(R.id.tvContent) as TextView
 //        }
+        
     }
 }
