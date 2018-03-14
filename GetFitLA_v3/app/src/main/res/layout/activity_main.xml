@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/screenBackground"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="practicum.getfitla_v3.MainActivity">
+
+
+    <Button
+        android:id="@+id/Activity_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="33.33"
+        android:background="@drawable/building"
+        android:src="@drawable/building"
+        android:text="@string/Activities"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:onClick="onClick_Maps"/>
+
+    <Button
+        android:id="@+id/Nutrition_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="33.33"
+        android:background="@drawable/crab"
+        android:onClick="onClick_Nutrition"
+        android:src="@drawable/crab"
+        android:text="@string/Nutrition"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Exercise_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="33.33"
+        android:background="@drawable/swim"
+        android:text="@string/Exercise"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:onClick="onClick_Exercise"/>
+
+
+</LinearLayout>

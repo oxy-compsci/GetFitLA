@@ -1,0 +1,35 @@
+
+R
+"app/src/main/res/values/colors.xml,9/6/969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
+R
+"app/src/main/res/values/styles.xml,f/7/f79cc2688e29fcbc286fda14ae07b27c9e83690f
+S
+#app/src/main/res/values/strings.xml,d/2/d2281fbb3027de2722081a53408dd77628bf080e
+e
+5app/src/main/java/practicum/getfitla_v3/Exercise.java,e/8/e82862fe4c49bd36813767a9f839aa4d314e104c
+T
+$app/src/main/res/layout/exercise.xml,9/f/9f8b9373e398fa6cbc5e65d5e84f243351c7d171
+a
+1app/src/main/java/practicum/getfitla_v3/Maps.java,5/b/5bf5fc26b8be9a6d5a92c91ba3fc59204228ba94
+P
+ app/src/main/res/layout/maps.xml,c/a/cae6fba4b2174a1a18239627447f268162da883f
+i
+9app/src/main/java/practicum/getfitla_v3/MainActivity.java,e/4/e42736d5e30a31976fb1b0611299be3e6d535ce8
+Y
+)app/src/main/res/layout/activity_main.xml,7/6/76b07e40f24cce093536731477540f12e7da3cb6
+i
+9app/src/main/java/practicum/getfitla_v3/List_Adaptor.java,d/f/df0b997745ecc8e94713712b8353f76a616b845b
+f
+6app/src/main/java/practicum/getfitla_v3/Nutrition.java,1/b/1bc98020d73feb31a7904b6f8ec63293e7a4fc93
+U
+%app/src/main/res/layout/nutrition.xml,e/2/e2d2ddec392cad4d12966bb11d3dfadfa2f1a63d
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
+A
+gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4
+@
+app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
+W
+'app/src/main/res/layout/list_layout.xml,6/6/66409a5ab4feac50d38275e0b69273717029601c
+c
+3app/src/main/java/practicum/getfitla_v3/detail.java,f/f/ffdb56d1c822ae905d47ca04cfc2c80a7512d50c
