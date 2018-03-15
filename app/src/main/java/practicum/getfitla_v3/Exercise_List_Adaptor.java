@@ -16,12 +16,12 @@ import java.util.List;
  * Created by Work on 3/13/18.
  */
 //For more info check out --> https://www.simplifiedcoding.net/android-recyclerview-cardview-tutorial/#RecyclerView-Item-Layout-using-CardView
-public class List_Adaptor extends RecyclerView.Adapter<List_Adaptor.itemViewHolder>{
+public class Exercise_List_Adaptor extends RecyclerView.Adapter<Exercise_List_Adaptor.itemViewHolder>{
 
     private Context mtcx;
-    private List<detail> fullList;
+    private List<Exercise_Detail> fullList;
 
-    public List_Adaptor(Context mtcx, List<detail> exerciseList) {
+    public Exercise_List_Adaptor(Context mtcx, List<Exercise_Detail> exerciseList) {
         this.mtcx = mtcx;
         this.fullList = exerciseList;
     }
@@ -37,7 +37,7 @@ public class List_Adaptor extends RecyclerView.Adapter<List_Adaptor.itemViewHold
 
     @Override
     public void onBindViewHolder(itemViewHolder holder, int position) {
-        detail exercise = fullList.get(position);
+        Exercise_Detail exercise = fullList.get(position);
 
         holder.textViewTitle.setText(exercise.getTitle());
         holder.textViewShortDesc.setText(exercise.getShortdesc());

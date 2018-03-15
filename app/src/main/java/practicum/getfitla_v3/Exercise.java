@@ -16,7 +16,7 @@ public class Exercise extends AppCompatActivity {
 
     RecyclerView recyclerView;
     //creating instances of adaptor to link to the recyclerview
-    List<detail> exerciseList;
+    List<Exercise_Detail> exerciseList;
 
 
 
@@ -30,9 +30,10 @@ public class Exercise extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this)); //setting the orientation of the recyclerview (by default it is vertical
 
         exerciseList = new ArrayList<>(); //initializing the array list
-
+        //each item in the arraylist will be an object. Each object is created in the detail file and add()ed here
+        //this will become the google sheets feed soon
         exerciseList.add(
-                new detail(
+                new Exercise_Detail(
                         1,
                         "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -41,7 +42,7 @@ public class Exercise extends AppCompatActivity {
                         R.drawable.building));
 
         exerciseList.add(
-                new detail(
+                new Exercise_Detail(
                         1,
                         "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
                         "14 inch, Gray, 1.659 kg",
@@ -50,7 +51,7 @@ public class Exercise extends AppCompatActivity {
                         R.drawable.building));
 
         exerciseList.add(
-                new detail(
+                new Exercise_Detail(
                         1,
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -58,7 +59,7 @@ public class Exercise extends AppCompatActivity {
                         60000,
                         R.drawable.building));
 
-        List_Adaptor adaptor = new List_Adaptor(this, exerciseList);
+        Exercise_List_Adaptor adaptor = new Exercise_List_Adaptor(this, exerciseList);
         recyclerView.setAdapter(adaptor);
 
     }

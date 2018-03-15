@@ -16,7 +16,7 @@ public class Nutrition extends AppCompatActivity {
 
     RecyclerView recyclerView;
     //creating instances of adaptor to link to the recyclerview
-    List<detail> nutritionList;
+    List<Nutrition_Detail> nutritionList;
 
 
 
@@ -32,7 +32,7 @@ public class Nutrition extends AppCompatActivity {
         nutritionList = new ArrayList<>(); //initializing the array list
 
         nutritionList.add(
-                new detail(
+                new Nutrition_Detail(
                         1,
                         "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -41,7 +41,7 @@ public class Nutrition extends AppCompatActivity {
                         R.drawable.building));
 
         nutritionList.add(
-                new detail(
+                new Nutrition_Detail(
                         1,
                         "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
                         "14 inch, Gray, 1.659 kg",
@@ -50,7 +50,7 @@ public class Nutrition extends AppCompatActivity {
                         R.drawable.building));
 
         nutritionList.add(
-                new detail(
+                new Nutrition_Detail(
                         1,
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -58,7 +58,7 @@ public class Nutrition extends AppCompatActivity {
                         60000,
                         R.drawable.building));
 
-        List_Adaptor adaptor = new List_Adaptor(this, nutritionList);
+        Nutrition_List_Adaptor adaptor = new Nutrition_List_Adaptor(this, nutritionList);
         recyclerView.setAdapter(adaptor);
 
     }

@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by Work on 3/14/18.
  */
 
-public class detail {
+public class Nutrition_Detail {
     private int id;
     private String title;
     private String shortdesc;
@@ -14,7 +14,7 @@ public class detail {
     private double price;
     private int image;
 
-    public detail(int id, String title, String shortdesc, double rating, double price, int image) {
+    public Nutrition_Detail(int id, String title, String shortdesc, double rating, double price, int image) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
