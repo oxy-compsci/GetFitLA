@@ -1,9 +1,7 @@
 # GetFitLA
 
-Android app for LA residents to find healthy meals, workouts, and outdoor activities.
+Hello, 
 
-Team Members:
-* Teagan Mucher
-* Joey Sortino
-* Daniel Huth
-* William Chen
+to run this file, import the file as a Gradle, Eclipse IDE. You can't import it as an Android Studio project because there
+is no build included in this repo.
+
