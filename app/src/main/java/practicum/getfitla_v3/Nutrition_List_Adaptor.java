@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
+
 
 import java.util.List;
 
@@ -20,6 +22,7 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
 
     private Context mtcx;
     private List<Nutrition_Detail> fullList;
+    private ItemClickListener clickListener;
 
     public Nutrition_List_Adaptor(Context mtcx, List<Nutrition_Detail> exerciseList) {
         this.mtcx = mtcx;
@@ -37,14 +40,14 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
 
     @Override
     public void onBindViewHolder(itemViewHolder holder, int position) {
-        Nutrition_Detail exercise = fullList.get(position);
+        Nutrition_Detail nutrition = fullList.get(position);
 
-        holder.textViewTitle.setText(exercise.getTitle());
-        holder.textViewShortDesc.setText(exercise.getShortdesc());
-        holder.textViewRating.setText(String.valueOf(exercise.getRating()));
-        holder.textViewPrice.setText(String.valueOf(exercise.getPrice()));
+        holder.textViewTitle.setText(nutrition.getTitle());
+        holder.textViewShortDesc.setText(nutrition.getShortdesc());
+        holder.textViewRating.setText(String.valueOf(nutrition.getRating()));
+        holder.textViewPrice.setText(String.valueOf(nutrition.getPrice()));
 
-        holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
+        holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(nutrition.getImage()));
 
 
         //binds data to our viewholder
@@ -58,11 +61,17 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
         //returns list size
     }
     //Adaptor takes viewholder located within List_adaptor
+    public void setClickListener(ItemClickListener itemClickListener) {
+        this.clickListener = itemClickListener;
 
-    class itemViewHolder extends RecyclerView.ViewHolder{
+     //error is here
+    }
+
+    public class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         //this is the actual class that contains all the relevant information in a given entry
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
+
 
 
         public itemViewHolder(View itemView) {
@@ -72,6 +81,14 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
             textViewRating = itemView.findViewById(R.id.textViewRating);
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
             imageview = itemView.findViewById(R.id.imageView);
+
+            //extra bits here http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/
+            itemView.setOnClickListener(this);
         }
+        @Override
+        public void onClick(View view) {
+           if (clickListener != null) clickListener.onClick(view, getAdapterPosition());
+        }
+
     }
 }

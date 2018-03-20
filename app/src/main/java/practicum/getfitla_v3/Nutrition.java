@@ -4,31 +4,35 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
+import android.content.Context;
 /**
  * Created by Work on 3/13/18.
  */
 
-public class Nutrition extends AppCompatActivity {
+public class Nutrition extends AppCompatActivity implements ItemClickListener{
 
     RecyclerView recyclerView;
     //creating instances of adaptor to link to the recyclerview
     List<Nutrition_Detail> nutritionList;
-
+    private Nutrition_List_Adaptor mAdapter; //new adaptor instance
+    private Context mContext;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nutrition);
+        mContext = this;
 
         recyclerView = (RecyclerView) findViewById(R.id.reyclerView);
         recyclerView.setHasFixedSize(true); //sets a fixed size for the recycler view size, not the elements in the recycler view
         recyclerView.setLayoutManager(new LinearLayoutManager(this)); //setting the orientation of the recyclerview (by default it is vertical
-
         nutritionList = new ArrayList<>(); //initializing the array list
 
         nutritionList.add(
@@ -58,8 +62,22 @@ public class Nutrition extends AppCompatActivity {
                         60000,
                         R.drawable.building));
 
-        Nutrition_List_Adaptor adaptor = new Nutrition_List_Adaptor(this, nutritionList);
+        mAdapter = new Nutrition_List_Adaptor(mContext, nutritionList);
+        Nutrition_List_Adaptor adaptor = new Nutrition_List_Adaptor(mContext, nutritionList);
         recyclerView.setAdapter(adaptor);
+        mAdapter.setClickListener(this); //bind the listener
+    }
+
+    @Override
+    public void onClick(View view, int position) {
+        Nutrition_Detail nutrition = nutritionList.get(position);
+        Intent intent = new Intent(mContext, Nutrition_New_Page.class);
+        System.out.println("YOYOYOYOYOYOYOYOYOYOYOYOYYadsfjaldsfa");
+        startActivity(intent);
 
     }
+
+    //http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/
+
+
 }

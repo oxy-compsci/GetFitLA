@@ -42,6 +42,9 @@
         <activity android:name=".Exercise"/>
         <activity android:name=".Maps"/>
         <activity android:name=".Nutrition"/>
+        <activity
+            android:name=".Nutrition_New_Page">
+        </activity>
     </application>
 
 </manifest>
