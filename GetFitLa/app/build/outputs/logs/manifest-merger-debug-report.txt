@@ -1,0 +1,287 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.10.aar/a8ac47989a4a2718679ac84cdde42e5c/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/59a267ceb275a6b031173b01b475b26a/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/406f2d260b73d3d644aeddaf8641ea98/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/eae5ad08ba465ca970945d39db5bb671/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/4146bff3871b5a41afb0058dca0c56cd/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:cardview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/d2364a65c80ee66a7f590f8fc2f5323f/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/c1d85ab29d181a556b8664752f2c7368/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/98f05ee73bc4e8851f4fb865fab06e13/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/dcc8a7768b551c9f1fd8ee26c5b9a110/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/f7758ff47822548bb3e1614401493bdb/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/f906b26abea5c6fe23b5520463d5809b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/773996de3808b332830b556715875bbe/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/491ab53db8c7347c6cfe463fca8af863/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/b848c5934f7475bdafad799dcfa8a6ac/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/9c8db53dc5f9d3a6fd3105858d863dba/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/c8846efbc8fa69d1b1818b17f8639fa9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-maps-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-11.8.0.aar/5ffcd0fe93fca8afefbb0e10c4a0794d/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/b0d38be387dc18f43a11e2423dafa49a/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/519bdfc83e795b1f14b1589e4b333589/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c5ceb0e34ee8ce20a546be26412d96fc/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/90f1b26d14cce054d94bbe921f4355e6/AndroidManifest.xml:2:1-6:12
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+	package
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:3:5-28
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:1-61:12
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:5:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:12:22-76
+application
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:14:5-59:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/59a267ceb275a6b031173b01b475b26a/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/59a267ceb275a6b031173b01b475b26a/AndroidManifest.xml:7:5-11:19
+MERGED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/406f2d260b73d3d644aeddaf8641ea98/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/406f2d260b73d3d644aeddaf8641ea98/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/eae5ad08ba465ca970945d39db5bb671/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/eae5ad08ba465ca970945d39db5bb671/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/4146bff3871b5a41afb0058dca0c56cd/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/4146bff3871b5a41afb0058dca0c56cd/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/d2364a65c80ee66a7f590f8fc2f5323f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/d2364a65c80ee66a7f590f8fc2f5323f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/c1d85ab29d181a556b8664752f2c7368/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/c1d85ab29d181a556b8664752f2c7368/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/98f05ee73bc4e8851f4fb865fab06e13/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/98f05ee73bc4e8851f4fb865fab06e13/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/dcc8a7768b551c9f1fd8ee26c5b9a110/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/dcc8a7768b551c9f1fd8ee26c5b9a110/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/f7758ff47822548bb3e1614401493bdb/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/f7758ff47822548bb3e1614401493bdb/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/f906b26abea5c6fe23b5520463d5809b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/f906b26abea5c6fe23b5520463d5809b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/773996de3808b332830b556715875bbe/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/773996de3808b332830b556715875bbe/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/491ab53db8c7347c6cfe463fca8af863/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/491ab53db8c7347c6cfe463fca8af863/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/b848c5934f7475bdafad799dcfa8a6ac/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/b848c5934f7475bdafad799dcfa8a6ac/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/9c8db53dc5f9d3a6fd3105858d863dba/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/9c8db53dc5f9d3a6fd3105858d863dba/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/c8846efbc8fa69d1b1818b17f8639fa9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/c8846efbc8fa69d1b1818b17f8639fa9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.android.gms:play-services-maps-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-11.8.0.aar/5ffcd0fe93fca8afefbb0e10c4a0794d/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-maps-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-11.8.0.aar/5ffcd0fe93fca8afefbb0e10c4a0794d/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/b0d38be387dc18f43a11e2423dafa49a/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/b0d38be387dc18f43a11e2423dafa49a/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/519bdfc83e795b1f14b1589e4b333589/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/519bdfc83e795b1f14b1589e4b333589/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c5ceb0e34ee8ce20a546be26412d96fc/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c5ceb0e34ee8ce20a546be26412d96fc/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/90f1b26d14cce054d94bbe921f4355e6/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/90f1b26d14cce054d94bbe921f4355e6/AndroidManifest.xml:5:5-20
+	android:supportsRtl
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:19:9-35
+	android:label
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:17:9-41
+	android:roundIcon
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:18:9-54
+	android:icon
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:16:9-43
+	android:allowBackup
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:15:9-35
+	android:theme
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:20:9-40
+activity#team.getfitla.MainActivity
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:21:9-27:20
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:21:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:25:27-74
+meta-data#preloaded_fonts
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:29:9-31:57
+	android:resource
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:31:13-54
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:30:13-43
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:41:9-43:55
+	android:value
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:43:13-52
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:42:13-58
+activity#team.getfitla.MapsActivity
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:45:9-48:67
+	android:parentActivityName
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:48:13-55
+	android:label
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:47:13-56
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:46:13-41
+activity#team.getfitla.ExerciseActivity
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:49:9-51:58
+	android:parentActivityName
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:51:13-55
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:50:13-45
+activity#team.getfitla.NutritionActivity
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:52:9-54:58
+	android:parentActivityName
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:54:13-55
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:53:13-46
+activity#team.getfitla.Exercise_Hardcode
+ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:56:9-58:71
+	android:parentActivityName
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:58:13-59
+	android:name
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml:57:13-46
+uses-sdk
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.10.aar/a8ac47989a4a2718679ac84cdde42e5c/AndroidManifest.xml:7:5-9:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.10.aar/a8ac47989a4a2718679ac84cdde42e5c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/59a267ceb275a6b031173b01b475b26a/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/59a267ceb275a6b031173b01b475b26a/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/406f2d260b73d3d644aeddaf8641ea98/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/406f2d260b73d3d644aeddaf8641ea98/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/eae5ad08ba465ca970945d39db5bb671/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/eae5ad08ba465ca970945d39db5bb671/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/4146bff3871b5a41afb0058dca0c56cd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/4146bff3871b5a41afb0058dca0c56cd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/d2364a65c80ee66a7f590f8fc2f5323f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/d2364a65c80ee66a7f590f8fc2f5323f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/c1d85ab29d181a556b8664752f2c7368/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/c1d85ab29d181a556b8664752f2c7368/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/98f05ee73bc4e8851f4fb865fab06e13/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/98f05ee73bc4e8851f4fb865fab06e13/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/dcc8a7768b551c9f1fd8ee26c5b9a110/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/dcc8a7768b551c9f1fd8ee26c5b9a110/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/f7758ff47822548bb3e1614401493bdb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/f7758ff47822548bb3e1614401493bdb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/f906b26abea5c6fe23b5520463d5809b/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/f906b26abea5c6fe23b5520463d5809b/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/773996de3808b332830b556715875bbe/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/773996de3808b332830b556715875bbe/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/491ab53db8c7347c6cfe463fca8af863/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/491ab53db8c7347c6cfe463fca8af863/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/b848c5934f7475bdafad799dcfa8a6ac/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/b848c5934f7475bdafad799dcfa8a6ac/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/9c8db53dc5f9d3a6fd3105858d863dba/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/9c8db53dc5f9d3a6fd3105858d863dba/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/c8846efbc8fa69d1b1818b17f8639fa9/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/c8846efbc8fa69d1b1818b17f8639fa9/AndroidManifest.xml:21:5-23:58
+MERGED from [com.google.android.gms:play-services-maps-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-11.8.0.aar/5ffcd0fe93fca8afefbb0e10c4a0794d/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-maps-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-11.8.0.aar/5ffcd0fe93fca8afefbb0e10c4a0794d/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/b0d38be387dc18f43a11e2423dafa49a/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/b0d38be387dc18f43a11e2423dafa49a/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/519bdfc83e795b1f14b1589e4b333589/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/519bdfc83e795b1f14b1589e4b333589/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c5ceb0e34ee8ce20a546be26412d96fc/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c5ceb0e34ee8ce20a546be26412d96fc/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/90f1b26d14cce054d94bbe921f4355e6/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/90f1b26d14cce054d94bbe921f4355e6/AndroidManifest.xml:4:5-43
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dhuth/Desktop/School/Comp Sci/gitthings/GetFitLA/GetFitLa/app/src/main/AndroidManifest.xml
+meta-data#com.google.android.gms.version
+ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/59a267ceb275a6b031173b01b475b26a/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/f7758ff47822548bb3e1614401493bdb/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/f7758ff47822548bb3e1614401493bdb/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/59a267ceb275a6b031173b01b475b26a/AndroidManifest.xml:10:13-66
+	android:name
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/59a267ceb275a6b031173b01b475b26a/AndroidManifest.xml:9:13-58
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/4146bff3871b5a41afb0058dca0c56cd/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/4146bff3871b5a41afb0058dca0c56cd/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/d2364a65c80ee66a7f590f8fc2f5323f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/d2364a65c80ee66a7f590f8fc2f5323f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/c1d85ab29d181a556b8664752f2c7368/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/c1d85ab29d181a556b8664752f2c7368/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/98f05ee73bc4e8851f4fb865fab06e13/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/98f05ee73bc4e8851f4fb865fab06e13/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/f906b26abea5c6fe23b5520463d5809b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/f906b26abea5c6fe23b5520463d5809b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/773996de3808b332830b556715875bbe/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/773996de3808b332830b556715875bbe/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/491ab53db8c7347c6cfe463fca8af863/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/491ab53db8c7347c6cfe463fca8af863/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/b848c5934f7475bdafad799dcfa8a6ac/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/b848c5934f7475bdafad799dcfa8a6ac/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/9c8db53dc5f9d3a6fd3105858d863dba/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/9c8db53dc5f9d3a6fd3105858d863dba/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/c8846efbc8fa69d1b1818b17f8639fa9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/c8846efbc8fa69d1b1818b17f8639fa9/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.2] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/e553befbd65e8c01fca69673dfc7ad01/AndroidManifest.xml:27:13-51
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:23:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:24:22-64
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.8.0.aar/9ce9ba3e6d22a9a52de68316c6bc8671/AndroidManifest.xml:28:9-32
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /Users/dhuth/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/7291f9db9be4fb6195b72c45d8c9539f/AndroidManifest.xml:24:13-79
