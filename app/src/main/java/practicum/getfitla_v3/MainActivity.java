@@ -37,3 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+
+//https://stackoverflow.com/questions/28572302/android-studio-not-recognizing-classes-after-power-failure?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+//if android studio runs and everything turns red where it constantly says Setup JDK 

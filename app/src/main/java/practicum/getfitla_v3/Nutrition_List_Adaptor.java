@@ -1,6 +1,7 @@
 package practicum.getfitla_v3;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.view.View.OnClickListener;
 
 import java.util.List;
 
+import static android.support.v4.content.ContextCompat.startActivity;
 
 
 /**
@@ -33,7 +35,7 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
     public itemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mtcx);
         View view = inflater.inflate(R.layout.list_layout, null);
-        //itemViewHolder holder = new itemViewHolder(view);
+        // itemViewHolder holder = new itemViewHolder(view);
         return new itemViewHolder(view);
         //creates a viewholder by returning an instance of the viewholder class
     }
@@ -56,14 +58,13 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
 
     @Override
     public int getItemCount() {
-        return fullList.size();
+        return fullList == null ? 0 : fullList.size();
 
         //returns list size
     }
     //Adaptor takes viewholder located within List_adaptor
     public void setClickListener(ItemClickListener itemClickListener) {
         this.clickListener = itemClickListener;
-
      //error is here
     }
 
@@ -71,8 +72,6 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
         //this is the actual class that contains all the relevant information in a given entry
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
-
-
 
         public itemViewHolder(View itemView) {
             super(itemView);
@@ -83,11 +82,32 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
             imageview = itemView.findViewById(R.id.imageView);
 
             //extra bits here http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/
+            itemView.setTag(itemView);
             itemView.setOnClickListener(this);
         }
         @Override
         public void onClick(View view) {
-           if (clickListener != null) clickListener.onClick(view, getAdapterPosition());
+            System.out.println("WHAT THE HECK" +
+                    "HERE WE GO" +
+                    "AHHH" +
+                    "BLAGH ALADFAJDSFA" +
+                    "BLADFADSFASD" +
+                    "BLadsfadsf" +
+                    "Blasdfadsfa");
+            //if clicked it's on null
+           if (clickListener == null) {
+
+
+               //FIX ME!!!
+               System.out.println("I Failed!");
+
+           } else {
+               System.out.println("NOT NULL");
+               clickListener.onClick(view, getAdapterPosition());
+           }
+
+
+
         }
 
     }

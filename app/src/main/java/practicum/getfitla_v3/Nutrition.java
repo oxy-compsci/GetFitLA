@@ -63,18 +63,17 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
                         R.drawable.building));
 
         mAdapter = new Nutrition_List_Adaptor(mContext, nutritionList);
-        Nutrition_List_Adaptor adaptor = new Nutrition_List_Adaptor(mContext, nutritionList);
-        recyclerView.setAdapter(adaptor);
-        mAdapter.setClickListener(this); //bind the listener
+        recyclerView.setAdapter(mAdapter);
+
+        mAdapter.setClickListener(this); //bind the listener  //this is not connected
+        System.out.println("YO");
     }
 
     @Override
     public void onClick(View view, int position) {
-        Nutrition_Detail nutrition = nutritionList.get(position);
-        Intent intent = new Intent(mContext, Nutrition_New_Page.class);
-        System.out.println("YOYOYOYOYOYOYOYOYOYOYOYOYYadsfjaldsfa");
+        Intent intent = new Intent(this, Nutrition_New_Page.class);
         startActivity(intent);
-
+        System.out.println("BACK ON THE MAIN PAGE"); //neither is this connected
     }
 
     //http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/
