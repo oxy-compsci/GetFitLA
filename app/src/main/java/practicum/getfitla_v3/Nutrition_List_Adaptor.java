@@ -48,24 +48,19 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
         holder.textViewShortDesc.setText(nutrition.getShortdesc());
         holder.textViewRating.setText(String.valueOf(nutrition.getRating()));
         holder.textViewPrice.setText(String.valueOf(nutrition.getPrice()));
-
-        holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(nutrition.getImage()));
-
-
-        //binds data to our viewholder
+        holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(nutrition.getImage())); //binds data to our viewholder
         //matches the position with the size of list
+
     }
 
     @Override
     public int getItemCount() {
         return fullList == null ? 0 : fullList.size();
-
         //returns list size
     }
-    //Adaptor takes viewholder located within List_adaptor
-    public void setClickListener(ItemClickListener itemClickListener) {
-        this.clickListener = itemClickListener;
-     //error is here
+    public void setClickListener(ItemClickListener itemClickListener) { //Adaptor takes viewholder located within List_adaptor
+        this.clickListener = itemClickListener;  //passing instance of clicklistener to a short name
+
     }
 
     public class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -73,7 +68,7 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
 
-        public itemViewHolder(View itemView) {
+        public itemViewHolder(View itemView) { //this controls how each entry is laid out
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
@@ -83,26 +78,17 @@ public class Nutrition_List_Adaptor extends RecyclerView.Adapter<Nutrition_List_
 
             //extra bits here http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/
             itemView.setTag(itemView);
-            itemView.setOnClickListener(this);
+            itemView.setOnClickListener(this); //sets each instance of onclicklistener to the item
         }
         @Override
-        public void onClick(View view) {
-            System.out.println("WHAT THE HECK" +
-                    "HERE WE GO" +
-                    "AHHH" +
-                    "BLAGH ALADFAJDSFA" +
-                    "BLADFADSFASD" +
-                    "BLadsfadsf" +
-                    "Blasdfadsfa");
+        public void onClick(View view) { //the actual onclick listener
             //if clicked it's on null
            if (clickListener == null) {
-
-
-               //FIX ME!!!
+               //if the clicklistener is empty
                System.out.println("I Failed!");
 
            } else {
-               System.out.println("NOT NULL");
+               //System.out.println("NOT NULL");
                clickListener.onClick(view, getAdapterPosition());
            }
 

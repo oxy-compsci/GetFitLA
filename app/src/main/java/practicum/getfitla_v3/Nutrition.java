@@ -19,7 +19,7 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
 
     RecyclerView recyclerView;
     //creating instances of adaptor to link to the recyclerview
-    List<Nutrition_Detail> nutritionList;
+    List<Nutrition_Detail> nutritionList; //creating a new list that will take object of type Nutrition_detail
     private Nutrition_List_Adaptor mAdapter; //new adaptor instance
     private Context mContext;
 
@@ -27,14 +27,14 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nutrition);
+        setContentView(R.layout.nutrition); //take the layout provided in the xml
         mContext = this;
 
         recyclerView = (RecyclerView) findViewById(R.id.reyclerView);
         recyclerView.setHasFixedSize(true); //sets a fixed size for the recycler view size, not the elements in the recycler view
         recyclerView.setLayoutManager(new LinearLayoutManager(this)); //setting the orientation of the recyclerview (by default it is vertical
         nutritionList = new ArrayList<>(); //initializing the array list
-
+        //begin adding entries
         nutritionList.add(
                 new Nutrition_Detail(
                         1,
@@ -71,9 +71,9 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
 
     @Override
     public void onClick(View view, int position) {
-        Intent intent = new Intent(this, Nutrition_New_Page.class);
+        Intent intent = new Intent(this, Nutrition_New_Page.class); //begin launching new activity
         startActivity(intent);
-        System.out.println("BACK ON THE MAIN PAGE"); //neither is this connected
+        System.out.println("BACK ON THE MAIN PAGE"); //Print statement that checks if the onClick works
     }
 
     //http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/
