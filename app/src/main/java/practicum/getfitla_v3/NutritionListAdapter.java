@@ -15,7 +15,7 @@ import java.util.List;
 
 import static android.support.v4.content.ContextCompat.startActivity;
 /**
- * This is the class that handles
+ * This is the class that binds the raw data to a specific item held within the recyclerview. 
 *Following link(s) were used to implement the Adapter
 * https://www.simplifiedcoding.net/android-recyclerview-cardview-tutorial/#RecyclerView-Item-Layout-using-CardView
 * http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/

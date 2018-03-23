@@ -10,6 +10,10 @@ import java.util.List;
 import android.content.Intent;
 import android.content.Context;
 
+
+/**
+ * An activity that displays a the list of Recipe Items
+ */
 public class Nutrition extends AppCompatActivity implements ItemClickListener{
 
     //Creating instance of recyclerview
