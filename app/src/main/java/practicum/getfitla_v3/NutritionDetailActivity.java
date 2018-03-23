@@ -4,18 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-/**
- * Created by Work on 3/17/18.
- */
-
-public class Nutrition_New_Page extends AppCompatActivity{
+//Please ignore this page for now, this is a dummy page
+public class NutritionDetailActivity extends AppCompatActivity{
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nutrition_new_page);
+        setContentView(R.layout.individual_nutrition_detail);
     }
 
     public void onClick_Maps(View view) {

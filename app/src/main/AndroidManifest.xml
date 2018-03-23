@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="practicum.getfitla_v3">
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
+     The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+     Google Maps Android API v2, but you must specify either coarse or fine
+     location permissions for the 'MyLocation' functionality.
+-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-
 
     <application
         android:allowBackup="true"
@@ -19,10 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- embeds the version of Google Play services the app was compiled with -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <!-- embeds the version of Google Play services the app was compiled with -->
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -30,7 +28,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <!-- draws the api key out -->
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -43,7 +40,7 @@
         <activity android:name=".Maps"/>
         <activity android:name=".Nutrition"/>
         <activity
-            android:name=".Nutrition_New_Page">
+            android:name=".NutritionDetailActivity">
         </activity>
     </application>
 
