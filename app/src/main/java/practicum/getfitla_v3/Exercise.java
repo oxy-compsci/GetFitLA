@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import org.json.JSONArray;
@@ -21,20 +22,40 @@ import java.util.List;
  */
 
 public class Exercise extends AppCompatActivity {
-
+    List<Exercise_Detail> exerciseList;
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
+            //rows = object.getJSONArray("c");
 
             for (int r = 0; r < rows.length(); ++r) {
+                //System.out.println(rows.getJSONObject(r));
+
+
                 JSONObject row = rows.getJSONObject(r);
-                JSONArray columns = row.getJSONArray("c");
+                //System.out.println(row);
+                //SONArray columns = row.getJSONArray("c");
+
                 int id = r;
-                String title = columns.getJSONObject(0).getString("v");
-                String shortdesc = columns.getJSONObject(1).getString("v");
-                double rating = columns.getJSONObject(2).getDouble("v");
-                double price = columns.getJSONObject(3).getDouble("v");
-                int image = columns.getJSONObject(4).getInt("v");
+                JSONObject Jtitle = (row.getJSONArray("c").getJSONObject(0));
+                String title = Jtitle.optString("v");
+                System.out.println(title);
+
+                JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(1));
+                String shortdesc = Jshortdesc.optString("v");
+                System.out.println(shortdesc);
+
+                JSONObject Jrating = (row.getJSONArray("c").getJSONObject(2));
+                String rating = Jrating.optString("v");
+                System.out.println(rating);
+
+                JSONObject Jprice = (row.getJSONArray("c").getJSONObject(3));
+                String price = Jprice.optString("v");
+                System.out.println(price);
+
+                //Integer image = Integer.parseInt((row.getJSONArray("c").getString(4)));
+                Integer image = 1; // Temporary fix until we have images
+
                 Exercise_Detail exercise = new Exercise_Detail(
                         id,
                         title,
@@ -50,9 +71,10 @@ public class Exercise extends AppCompatActivity {
         }
     }
 
+
     RecyclerView recyclerView;
     //creating instances of adaptor to link to the recyclerview
-    List<Exercise_Detail> exerciseList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +82,12 @@ public class Exercise extends AppCompatActivity {
         setContentView(R.layout.exercise);
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        new DownloadWebpageTask(new AsyncResult() {
+        new DownloadWebpageTask(new AsyncResult() {  //This essentially begins the whole database processing fiasco.
             @Override
             public void onResult(JSONObject object) {
                 processJson(object);
             }
-        }).execute("https://docs.google.com/spreadsheets/d/1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc/edit#gid=0");
+        }).execute("https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc");
 
 
         recyclerView = (RecyclerView) findViewById(R.id.reyclerView);
@@ -78,6 +100,9 @@ public class Exercise extends AppCompatActivity {
         Exercise_List_Adaptor adaptor = new Exercise_List_Adaptor(this, exerciseList);
         recyclerView.setAdapter(adaptor);
     }
+    // Parses the json string and takes each piece of data from said string, and assigns it to a piece
+    // of data that is required by the detail activity.
+
 
 
 }

@@ -1,6 +1,7 @@
 package practicum.getfitla_v3;
 
         import android.os.AsyncTask;
+        import android.util.Log;
 
         import org.json.JSONException;
         import org.json.JSONObject;
@@ -18,10 +19,9 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
     public DownloadWebpageTask(AsyncResult callback) {
         this.callback = callback;
     }
-
+    // Allows other processes to occur while the app is attempting to download the webpage.
     @Override
     protected String doInBackground(String... urls) {
-
         // params comes from the execute() call: params[0] is the url.
         try {
             return downloadUrl(urls[0]);
@@ -33,10 +33,10 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
     // onPostExecute displays the results of the AsyncTask.
     @Override
     protected void onPostExecute(String result) {
-        // remove the unnecessary parts from the response and construct a JSON
-        int start = result.indexOf("[{ 'v' ");
-        int end = result.lastIndexOf(")");
-        String jsonResponse = result.substring(start+1, end);
+        // Removing excess garbage data from the json file.
+        int start = result.indexOf("{", result.indexOf("{") + 1);
+        int end = result.lastIndexOf("}");
+        String jsonResponse = result.substring(start, end);
         try {
             JSONObject table = new JSONObject(jsonResponse);
             callback.onResult(table);
@@ -44,10 +44,9 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
             e.printStackTrace();
         }
     }
-
+    // takes the URl as a string, uses google query language to download the spreadsheet as a JSON file
     private String downloadUrl(String urlString) throws IOException {
         InputStream is = null;
-
         try {
             URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -61,6 +60,7 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
             is = conn.getInputStream();
 
             String contentAsString = convertStreamToString(is);
+            //Log.d(contentAsString, "downloadUrl: String from download");
             return contentAsString;
         } finally {
             if (is != null) {
@@ -68,11 +68,10 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
             }
         }
     }
-
+    // Simple buffered reader to read json file and write it to a string
     private String convertStreamToString(InputStream is) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
-
         String line = null;
         try {
             while ((line = reader.readLine()) != null) {

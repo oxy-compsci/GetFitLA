@@ -10,11 +10,11 @@ public class Exercise_Detail {
     private int id;
     private String title;
     private String shortdesc;
-    private double rating;
-    private double price;
-    private int image;
+    private String rating;
+    private String price;
+    private Integer image;
 
-    public Exercise_Detail(int id, String title, String shortdesc, double rating, double price, int image) {
+    public Exercise_Detail(int id, String title, String shortdesc, String rating, String price, Integer image) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
@@ -35,15 +35,15 @@ public class Exercise_Detail {
         return shortdesc;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public int getImage() {
+    public Integer getImage() {
         return image;
     }
 }
