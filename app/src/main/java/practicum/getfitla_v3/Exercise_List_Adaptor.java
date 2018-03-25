@@ -7,22 +7,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
-
-
 
 import java.util.List;
 
-//For more information about the code, please check out the NutritionListAdapter as they are functionally identical
 
-public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapter.itemViewHolder>{
+
+/**
+ * Created by Work on 3/13/18.
+ */
+//For more info check out --> https://www.simplifiedcoding.net/android-recyclerview-cardview-tutorial/#RecyclerView-Item-Layout-using-CardView
+public class Exercise_List_Adaptor extends RecyclerView.Adapter<Exercise_List_Adaptor.itemViewHolder>{
 
     private Context mtcx;
-    private List<ExerciseItemFormat> fullList;
-    private ItemClickListener clickListener;
+    private List<Exercise_Detail> fullList;
 
-
-    public ExerciseListAdapter(Context mtcx, List<ExerciseItemFormat> exerciseList) {
+    public Exercise_List_Adaptor(Context mtcx, List<Exercise_Detail> exerciseList) {
         this.mtcx = mtcx;
         this.fullList = exerciseList;
     }
@@ -33,31 +32,35 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
         View view = inflater.inflate(R.layout.list_layout, null);
         //itemViewHolder holder = new itemViewHolder(view);
         return new itemViewHolder(view);
+        //creates a viewholder by returning an instance of the viewholder class
     }
 
     @Override
     public void onBindViewHolder(itemViewHolder holder, int position) {
-        ExerciseItemFormat exercise = fullList.get(position);
+        Exercise_Detail exercise = fullList.get(position);
 
         holder.textViewTitle.setText(exercise.getTitle());
         holder.textViewShortDesc.setText(exercise.getShortdesc());
         holder.textViewRating.setText(String.valueOf(exercise.getRating()));
         holder.textViewPrice.setText(String.valueOf(exercise.getPrice()));
+
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
 
+
+        //binds data to our viewholder
+        //matches the position with the size of list
     }
 
     @Override
     public int getItemCount() {
-        return fullList == null ? 0 : fullList.size();
+        return fullList.size();
 
+        //returns list size
     }
-    public void setClickListener(ItemClickListener itemClickListener) {
-        this.clickListener = itemClickListener;
+    //Adaptor takes viewholder located within List_adaptor
 
-    }
-
-    class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class itemViewHolder extends RecyclerView.ViewHolder{
+        //this is the actual class that contains all the relevant information in a given entry
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
 
@@ -69,18 +72,6 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
             textViewRating = itemView.findViewById(R.id.textViewRating);
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
             imageview = itemView.findViewById(R.id.imageView);
-
-            itemView.setTag(itemView);
-            itemView.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View view) {
-            if (clickListener == null) {
-                System.out.println("I Failed!");
-            } else {
-                clickListener.onClick(view, getAdapterPosition());
-            }
         }
     }
 }

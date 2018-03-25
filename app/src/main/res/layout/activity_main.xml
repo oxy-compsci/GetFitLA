@@ -17,13 +17,12 @@
         android:layout_height="0dp"
         android:layout_weight="33.33"
         android:background="@drawable/building"
-        android:fontFamily="@font/arvo"
-        android:onClick="onClick_Maps"
         android:src="@drawable/building"
         android:text="@string/Activities"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        android:textStyle="bold" tools:targetApi="jelly_bean"/>
+        android:textStyle="bold"
+        android:onClick="onClick_Maps"/>
 
     <Button
         android:id="@+id/Nutrition_button"
@@ -31,7 +30,6 @@
         android:layout_height="0dp"
         android:layout_weight="33.33"
         android:background="@drawable/crab"
-        android:fontFamily="@font/arvo"
         android:onClick="onClick_Nutrition"
         android:src="@drawable/crab"
         android:text="@string/Nutrition"
@@ -45,12 +43,11 @@
         android:layout_height="0dp"
         android:layout_weight="33.33"
         android:background="@drawable/swim"
-        android:fontFamily="@font/arvo"
-        android:onClick="onClick_Exercise"
         android:text="@string/Exercise"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="onClick_Exercise"/>
 
 
 </LinearLayout>

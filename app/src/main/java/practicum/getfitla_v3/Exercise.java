@@ -16,15 +16,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import android.content.Intent;
-import android.content.Context;
 
+/**
+ * Created by Work on 3/13/18.
+ */
 
-public class Exercise extends AppCompatActivity implements ItemClickListener{
-
-    List<ExerciseItemFormat> exerciseList = new ArrayList<>(3);
-    private ExerciseListAdapter mAdapter;
-    private Context mContext;
+public class Exercise extends AppCompatActivity {
+    List<Exercise_Detail> exerciseList;
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
@@ -54,10 +52,11 @@ public class Exercise extends AppCompatActivity implements ItemClickListener{
                 JSONObject Jprice = (row.getJSONArray("c").getJSONObject(3));
                 String price = Jprice.optString("v");
                 System.out.println(price);
+
                 //Integer image = Integer.parseInt((row.getJSONArray("c").getString(4)));
                 Integer image = 1; // Temporary fix until we have images
 
-                ExerciseItemFormat exercise = new ExerciseItemFormat(
+                Exercise_Detail exercise = new Exercise_Detail(
                         id,
                         title,
                         shortdesc,
@@ -71,6 +70,8 @@ public class Exercise extends AppCompatActivity implements ItemClickListener{
             e.printStackTrace();
         }
     }
+
+
     RecyclerView recyclerView;
     //creating instances of adaptor to link to the recyclerview
 
@@ -87,7 +88,8 @@ public class Exercise extends AppCompatActivity implements ItemClickListener{
                 processJson(object);
             }
         }).execute("https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc");
-        mContext = this;
+
+
         recyclerView = (RecyclerView) findViewById(R.id.reyclerView);
         recyclerView.setHasFixedSize(true); //sets a fixed size for the recycler view size, not the elements in the recycler view
         recyclerView.setLayoutManager(new LinearLayoutManager(this)); //setting the orientation of the recyclerview (by default it is vertical
@@ -95,18 +97,12 @@ public class Exercise extends AppCompatActivity implements ItemClickListener{
         exerciseList = new ArrayList<>(); //initializing the array list
         //each item in the arraylist will be an object. Each object is created in the detail file and add()ed here
         //this will become the google sheets feed soon
-        ExerciseListAdapter adaptor = new ExerciseListAdapter(this, exerciseList);
+        Exercise_List_Adaptor adaptor = new Exercise_List_Adaptor(this, exerciseList);
         recyclerView.setAdapter(adaptor);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new ExerciseListAdapter(mContext, exerciseList);
-        recyclerView.setAdapter(mAdapter);
-        mAdapter.setClickListener(this);
     }
+    // Parses the json string and takes each piece of data from said string, and assigns it to a piece
+    // of data that is required by the detail activity.
 
-    @Override
-    public void onClick(View view, int position) {
-        Intent intent = new Intent(this, NutritionDetailActivity.class);
-        startActivity(intent);
-    }
+
+
 }
