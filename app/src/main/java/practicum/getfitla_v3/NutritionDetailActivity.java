@@ -4,20 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-
-public class MainActivity extends AppCompatActivity {
-
+//Please ignore this page for now, this is a dummy page
+public class NutritionDetailActivity extends AppCompatActivity{
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.individual_nutrition_detail);
     }
 
     public void onClick_Maps(View view) {
-        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, Maps.class);
         startActivity(intent);
 
     }

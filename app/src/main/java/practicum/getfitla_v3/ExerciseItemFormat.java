@@ -2,11 +2,8 @@ package practicum.getfitla_v3;
 
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by Work on 3/14/18.
- */
-
-public class Nutrition_Detail {
+//Formats Information to be easily called
+public class ExerciseItemFormat {
     private int id;
     private String title;
     private String shortdesc;
@@ -14,7 +11,7 @@ public class Nutrition_Detail {
     private double price;
     private int image;
 
-    public Nutrition_Detail(int id, String title, String shortdesc, double rating, double price, int image) {
+    public ExerciseItemFormat(int id, String title, String shortdesc, double rating, double price, int image) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
