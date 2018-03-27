@@ -193,9 +193,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onComplete(@NonNull Task task) {
                         if (task.isSuccessful()) {
                             lastLocation = (Location) task.getResult();
-                            System.out.println("Test");
                             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                                    // FIXME: .getLatitude() method throws null pointer exception
                                     new LatLng(lastLocation.getLatitude(),
                                             lastLocation.getLongitude()), 14f));
                         } else {
