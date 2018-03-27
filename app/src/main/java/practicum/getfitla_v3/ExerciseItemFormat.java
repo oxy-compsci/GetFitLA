@@ -7,11 +7,11 @@ public class ExerciseItemFormat {
     private int id;
     private String title;
     private String shortdesc;
-    private double rating;
-    private double price;
+    private String rating;
+    private String price;
     private int image;
 
-    public ExerciseItemFormat(int id, String title, String shortdesc, double rating, double price, int image) {
+    public ExerciseItemFormat(int id, String title, String shortdesc, String rating, String price, int image) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
@@ -32,11 +32,11 @@ public class ExerciseItemFormat {
         return shortdesc;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
