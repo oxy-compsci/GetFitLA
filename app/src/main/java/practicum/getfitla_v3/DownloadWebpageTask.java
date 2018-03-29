@@ -13,9 +13,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
-    AsyncResult callback;
+    AsyncCallback callback;
 
-    public DownloadWebpageTask(AsyncResult callback) {
+    public DownloadWebpageTask(AsyncCallback callback) {
         this.callback = callback;
     }
     // Allows other processes to occur while the app is attempting to download the webpage.

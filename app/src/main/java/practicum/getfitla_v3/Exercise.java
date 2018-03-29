@@ -74,7 +74,7 @@ public class Exercise extends AppCompatActivity implements ItemClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercise);
         final Exercise this_exercise = this;
-        new DownloadWebpageTask(new AsyncResult() {  //This essentially begins the whole database processing fiasco.
+        new DownloadWebpageTask(new AsyncCallback() {  //This essentially begins the whole database processing fiasco.
             @Override
             public void onResult(JSONObject object) {
                 processJson(object);
