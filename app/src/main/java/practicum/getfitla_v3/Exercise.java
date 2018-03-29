@@ -12,12 +12,15 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.content.Intent;
 
 
-public class Exercise extends AppCompatActivity implements ItemClickListener{
+public class Exercise extends AppCompatActivity implements ItemClickListener {
 
-    List<ExerciseItemFormat> exerciseList = new ArrayList<>(3);
+    static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc";
+
+    List<ExerciseItemFormat> exerciseList = new ArrayList<>();
     RecyclerView recyclerView;
     //creating instances of adaptor to link to the recyclerview
     private ExerciseListAdapter mAdapter;
@@ -92,7 +95,7 @@ public class Exercise extends AppCompatActivity implements ItemClickListener{
                 recyclerView.setAdapter(mAdapter);
                 mAdapter.setClickListener(this_exercise);
             }
-        }).execute("https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc");
+        }).execute(EXERCISE_SHEET_URL);
     }
 
     @Override

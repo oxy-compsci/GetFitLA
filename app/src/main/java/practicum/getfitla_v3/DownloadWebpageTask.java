@@ -18,6 +18,7 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
     public DownloadWebpageTask(AsyncCallback callback) {
         this.callback = callback;
     }
+
     // Allows other processes to occur while the app is attempting to download the webpage.
     @Override
     protected String doInBackground(String... urls) {
@@ -43,6 +44,7 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
             e.printStackTrace();
         }
     }
+
     // takes the URl as a string, uses google query language to download the spreadsheet as a JSON file
     private String downloadUrl(String urlString) throws IOException {
         InputStream is = null;
@@ -55,23 +57,22 @@ public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
             conn.setDoInput(true);
             // Starts the query
             conn.connect();
-            int responseCode = conn.getResponseCode();
             is = conn.getInputStream();
 
-            String contentAsString = convertStreamToString(is);
             //Log.d(contentAsString, "downloadUrl: String from download");
-            return contentAsString;
+            return convertStreamToString(is);
         } finally {
             if (is != null) {
                 is.close();
             }
         }
     }
+
     // Simple buffered reader to read json file and write it to a string
     private String convertStreamToString(InputStream is) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
-        String line = null;
+        String line;
         try {
             while ((line = reader.readLine()) != null) {
                 sb.append(line + "\n");
