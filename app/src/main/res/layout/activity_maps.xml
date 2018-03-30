@@ -5,5 +5,4 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="practicum.getfitla_v3.Maps"
-    tools:layout="@layout/maps" />
+    tools:context="practicum.getfitla_v3.MapsActivity" />

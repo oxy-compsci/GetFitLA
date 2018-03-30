@@ -1,12 +1,9 @@
 package practicum.getfitla_v3;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_Maps(View view) {
-        Intent intent = new Intent(this, Maps.class);
+        Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
 
     }
