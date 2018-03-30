@@ -15,7 +15,7 @@ public class NutritionDetailActivity extends AppCompatActivity{
     }
 
     public void onClick_Maps(View view) {
-        Intent intent = new Intent(this, Maps.class);
+        Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
 
     }
