@@ -17,4 +17,4 @@ android:
 before_install:
   - yes | sdkmanager "platforms;android-27"
 script:
-  - gradle build ExampleUnitTest
+  - ./gradlew build ExampleUnitTest
