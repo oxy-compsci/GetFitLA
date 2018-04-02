@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GetFitLA_v3</string>
+    <string name="Activities">Actividades</string>
+    <string name="Nutrition">Nutrición</string>
+    <string name="Exercise">Ejercicio</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="button_breakfast">Desayuno</string>
+    <string name="button_lunch">Almuerzo</string>
+    <string name="button_dinner">Cena</string>
+</resources>
