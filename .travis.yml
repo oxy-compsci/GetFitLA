@@ -8,9 +8,9 @@ cache:
     -$HOME/.gradle/wrapper/
 env:
   global:
-    - ANDROID_API=24
-    - EMULATOR_API=21
-    - ANDROID_BUILD_TOOLS=24.0.2
+    - ANDROID_API=26
+    - EMULATOR_API=23
+    - ANDROID_BUILD_TOOLS=26.1.1
     - ADB_INSTALL_TIMEOUT=5 # minutes
 android:
   components:
@@ -31,5 +31,10 @@ cache:
     - $HOME/.gradle/wrapper/
 before_install:
   - yes | sdkmanager "platforms;android-27"
+before_script:
+- echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
+- emulator -avd test -no-skin -no-audio -no-window &
+- android-wait-for-emulator
+- adb shell input keyevent 82 &
 script:
   - ./gradlew build connectedCheck
