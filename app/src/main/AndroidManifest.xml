@@ -36,11 +36,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Exercise"/>
-        <activity android:name=".Maps"/>
-        <activity android:name=".Nutrition"/>
+        <activity android:name=".Exercise" />
+        <activity android:name=".Nutrition" />
+        <activity android:name=".NutritionDetailActivity"/>
         <activity
-            android:name=".NutritionDetailActivity">
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="practicum.getfitla_v3.MainActivity" />
         </activity>
     </application>
 

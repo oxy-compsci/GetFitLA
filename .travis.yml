@@ -1,0 +1,28 @@
+language: android
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache/
+env:
+  global:
+    - ADB_INSTALL_TIMEOUT=5 # minutes
+android:
+  components:
+    - tools
+    - platform-tools
+    - add-on
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - extra-android-support
+  licenses:
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+before_install:
+  - yes | sdkmanager "platforms;android-27"
+script:
+  - ./gradlew build
+  - ./gradlew test
