@@ -15,6 +15,8 @@ import java.util.List;
 
 import android.content.Intent;
 
+import android.content.Intent;
+
 
 public class Exercise extends AppCompatActivity implements ItemClickListener {
 
@@ -28,15 +30,10 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
-            //rows = object.getJSONArray("c");
 
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
-                //System.out.println(rows.getJSONObject(row_id));
-
 
                 JSONObject row = rows.getJSONObject(row_id);
-                //System.out.println(row);
-                //SONArray columns = row.getJSONArray("c");
 
                 JSONObject Jtitle = (row.getJSONArray("c").getJSONObject(0));
                 String title = Jtitle.optString("v");
@@ -104,3 +101,4 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
         startActivity(intent);
     }
 }
+

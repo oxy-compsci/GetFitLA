@@ -50,7 +50,6 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
     @Override
     public int getItemCount() {
         return fullList == null ? 0 : fullList.size();
-
     }
     public void setClickListener(ItemClickListener itemClickListener) {
         this.clickListener = itemClickListener;
