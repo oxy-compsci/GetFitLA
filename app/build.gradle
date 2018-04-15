@@ -49,6 +49,15 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:11.8.0'
     implementation 'com.google.android.gms:play-services-location:11.8.0'
 
+<<<<<<< HEAD
+
+    //begin google maps dependencies
+    compile 'com.google.maps.android:android-maps-utils:0.5+'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
+
+=======
+>>>>>>> master
 
 
 }

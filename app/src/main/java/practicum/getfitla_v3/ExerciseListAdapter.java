@@ -44,7 +44,10 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
         holder.textViewRating.setText(String.valueOf(exercise.getRating()));
         holder.textViewPrice.setText(String.valueOf(exercise.getPrice()));
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
     }
 
     @Override

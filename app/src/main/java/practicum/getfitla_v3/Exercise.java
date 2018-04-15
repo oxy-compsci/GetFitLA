@@ -1,23 +1,32 @@
 package practicum.getfitla_v3;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+<<<<<<< HEAD
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+=======
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+>>>>>>> master
 import java.util.ArrayList;
 import java.util.List;
+import android.content.Intent;
 
+<<<<<<< HEAD
+=======
 import android.content.Intent;
 
 import android.content.Intent;
 
 
+>>>>>>> master
 public class Exercise extends AppCompatActivity implements ItemClickListener {
 
     static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc";
@@ -38,11 +47,19 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 JSONObject Jtitle = (row.getJSONArray("c").getJSONObject(0));
                 String title = Jtitle.optString("v");
                 System.out.println(title);
+<<<<<<< HEAD
 
                 JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(1));
                 String shortdesc = Jshortdesc.optString("v");
                 System.out.println(shortdesc);
 
+=======
+
+                JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(1));
+                String shortdesc = Jshortdesc.optString("v");
+                System.out.println(shortdesc);
+
+>>>>>>> master
                 JSONObject Jrating = (row.getJSONArray("c").getJSONObject(2));
                 String rating = Jrating.optString("v");
                 System.out.println(rating);

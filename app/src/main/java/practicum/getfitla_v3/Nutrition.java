@@ -41,8 +41,12 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
                 JSONObject row = rows.getJSONObject(r);
 
                 int id = r;
+<<<<<<< HEAD
+                String title = row.getJSONArray("c").getJSONObject(0).optString("v");
+=======
                 JSONObject Jtitle = (row.getJSONArray("c").getJSONObject(0));
                 String title = Jtitle.optString("v");
+>>>>>>> master
                 //System.out.println(title);
 
                 JSONObject Jpreptime = (row.getJSONArray("c").getJSONObject(1));
