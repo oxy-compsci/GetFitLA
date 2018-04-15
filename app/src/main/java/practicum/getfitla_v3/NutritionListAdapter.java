@@ -34,7 +34,7 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     @Override
     public itemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mtcx);
-        View view = inflater.inflate(R.layout.list_layout, null);
+        View view = inflater.inflate(R.layout.n_list_layout, null);
         // itemViewHolder holder = new itemViewHolder(view);
         //creates a viewholder by returning an instance of the viewholder class
         return new itemViewHolder(view);
@@ -45,10 +45,10 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
         NutritionItemFormat nutrition = fullList.get(position);
         //binds data to our viewholder
 
-        holder.textViewTitle.setText(nutrition.getTitle());
+        holder.textViewTitle.setText(nutrition.getName());
         holder.textViewShortDesc.setText(nutrition.getShortdesc());
-        holder.textViewRating.setText(String.valueOf(nutrition.getRating()));
-        holder.textViewPrice.setText(String.valueOf(nutrition.getPrice()));
+        //holder.textViewRating.setText(String.valueOf(nutrition.getRating()));
+        //holder.textViewPrice.setText(String.valueOf(nutrition.getPrice()));
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(nutrition.getImage()));
     }
 

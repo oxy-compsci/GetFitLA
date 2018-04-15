@@ -5,11 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fillViewport="true"
-    android:id="@+id/scroll_view">
+    android:id="@+id/scroll_view"
+    >
 
 
     <TextView
-        android:id="@+id/RecipeTitle"
+        android:id="@+id/exercise_title"
         android:layout_width="394dp"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -19,10 +20,16 @@
         android:layout_marginTop="20dp"/>
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_weight="1"
+        android:id="@+id/exercise_image"
+        android:layout_width="331dp"
+        android:layout_height="99dp"
         android:layout_margin="50dp"
+        android:layout_weight="1"
         app:srcCompat="@android:drawable/btn_star" />
+
+    <TextView
+        android:id="@+id/exercise_guide"
+        android:layout_width="match_parent"
+        android:layout_height="51dp" />
 
 </LinearLayout>

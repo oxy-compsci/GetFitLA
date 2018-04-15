@@ -1,0 +1,60 @@
+package practicum.getfitla_v3;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+//Please ignore this page for now, this is a dummy page
+public class ExerciseDetailActivity extends AppCompatActivity{
+    private int passedid;
+    private String passedtitle;
+    private String passedshortdesc;
+    private String passedrating;
+    private String passedprice;
+    private int passedimage;
+
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.individual_exercise_detail);
+
+
+        Bundle data = getIntent().getExtras();
+        //extra.putSerializable("Exercise_List", (exerciseList));
+        //ExerciseItemFormat ExercistItem = (ExerciseItemFormat) data.getParcelable("ExerciseInfo");
+        //Bundle data = getIntent().getExtras();
+        ExerciseItemFormat CurItem = (ExerciseItemFormat) data.getParcelable("ExerciseInfo");
+        passedid = CurItem.getId();
+        passedtitle = CurItem.getTitle();
+        passedshortdesc = CurItem.getShortdesc();
+        passedrating = CurItem.getRating();
+        passedprice = CurItem.getPrice();
+        passedimage = CurItem.getImage();
+        System.out.println(passedshortdesc);
+
+        TextView title = (TextView)findViewById(R.id.exercise_title);
+        title.setText(passedtitle);
+        TextView guide = (TextView)findViewById(R.id.exercise_guide);
+        guide.setText(passedshortdesc);
+
+
+
+
+
+
+
+    }
+
+
+}

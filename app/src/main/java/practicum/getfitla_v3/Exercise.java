@@ -16,18 +16,24 @@ import java.util.List;
 import android.content.Intent;
 
 
+
+
 public class Exercise extends AppCompatActivity implements ItemClickListener {
 
-    static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc";
-
-    List<ExerciseItemFormat> exerciseList = new ArrayList<>();
+    static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=10ZQ7w7r1U6LM4VPAVaMQ3nOPIBHZ7qXcUFgA66wwjys";
+    //object is ExerciseItemFormat
+    public ArrayList<ExerciseItemFormat> exerciseList = new ArrayList<>();
     RecyclerView recyclerView;
     //creating instances of adaptor to link to the recyclerview
+
+
+
     private ExerciseListAdapter mAdapter;
 
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
+            System.out.println(rows);
             //rows = object.getJSONArray("c");
 
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
@@ -56,6 +62,7 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 //Integer image = Integer.parseInt((row.getJSONArray("c").getString(4)));
                 Integer image = R.drawable.building; // Temporary fix until we have images
 
+                //creates a new instance of exercise for each exercise type
                 ExerciseItemFormat exercise = new ExerciseItemFormat(
                         row_id,
                         title,
@@ -93,14 +100,25 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 recyclerView.setLayoutManager(new LinearLayoutManager(this_exercise));
                 mAdapter = new ExerciseListAdapter(this_exercise, exerciseList);
                 recyclerView.setAdapter(mAdapter);
+
                 mAdapter.setClickListener(this_exercise);
+
             }
         }).execute(EXERCISE_SHEET_URL);
     }
 
+
+
+
     @Override
     public void onClick(View view, int position) {
-        Intent intent = new Intent(this, NutritionDetailActivity.class);
+
+        ExerciseItemFormat current = exerciseList.get(position);
+        Intent intent = new Intent(this, ExerciseDetailActivity.class);
+      //  ArrayList<ExerciseItemFormat> passedExercise = exerciseList;
+
+        intent.putExtra("ExerciseInfo", current);
+
         startActivity(intent);
     }
 }

@@ -30,7 +30,7 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
     @Override
     public itemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mtcx);
-        View view = inflater.inflate(R.layout.list_layout, null);
+        View view = inflater.inflate(R.layout.e_list_layout, null);
         //itemViewHolder holder = new itemViewHolder(view);
         return new itemViewHolder(view);
     }
@@ -45,6 +45,8 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
         holder.textViewPrice.setText(String.valueOf(exercise.getPrice()));
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
 
+
+
     }
 
     @Override
@@ -56,6 +58,7 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
         this.clickListener = itemClickListener;
 
     }
+
 
     class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView imageview;
@@ -76,10 +79,12 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
 
         @Override
         public void onClick(View view) {
+
             if (clickListener == null) {
                 System.out.println("I Failed!");
             } else {
                 clickListener.onClick(view, getAdapterPosition());
+
             }
         }
     }

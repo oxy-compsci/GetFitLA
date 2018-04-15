@@ -21,4 +21,9 @@
         demonstrate the \'my location\' feature, which shows your current location on the map.</string>
     <string name="Title" translatable="false">Get Fit L.A.</string>
 
+=======
+
+    <!-- Begin strings that take in data to from adapter to be used in the detailed activities-->
+    <string name="Recipe_Title">Recipe</string>
+>>>>>>> Stashed changes
 </resources>
