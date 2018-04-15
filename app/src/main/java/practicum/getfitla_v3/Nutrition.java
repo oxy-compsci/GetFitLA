@@ -33,11 +33,10 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
-            //rows = object.getJSONArray("c");
-            //System.out.print(rows.length());
+            //declare strings outside to be accessible when being added
             String name;
             String shortdesc;
-            Integer image;
+            int image;
             // rating,
             //   price,
 
@@ -49,100 +48,77 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
             String ingredients;
 
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
-
-
                 //System.out.println(rows.getJSONObject(row_id));
                 JSONObject row = rows.getJSONObject(row_id);
                 //System.out.println("This is the row id" + row);
-
+                //initialize secondary counter to control for the index
                 int counter = 0;
-
-                //System.out.println(row);
-                //SONArray columns = row.getJSONArray("c");
-
-                //need to write a second for loop to check for
-                //name for the Recipe
-                //System.out.println("name: " + counter);
+                //added try/catch exceptions because of null values in Json files
                 try{     JSONObject Jname = (row.getJSONArray("c").getJSONObject(counter));
                           name = Jname.optString("v");
-                         //System.out.println(name);
                          counter++;}
                          catch (JSONException ex)
                 {                    counter++;
 
                     JSONObject Jname = (row.getJSONArray("c").getJSONObject(counter));
                     name = Jname.optString("v");
-                    //System.out.println(name);
+                    counter++;
                 }
 
-                //System.out.println("preptime " + counter);
-                //preptime
                 try{JSONObject JprepTime = (row.getJSONArray("c").getJSONObject(counter));
                 prepTime = JprepTime.optString("v");
-                //System.out.println(prepTime);
                 counter++;}
                 catch (JSONException ex) {
                     counter++;
                     JSONObject JprepTime = (row.getJSONArray("c").getJSONObject(counter));
                     prepTime = JprepTime.optString("v");
-                    //System.out.println(prepTime);
                     counter++;
                     }
 
-                //System.out.println("Servingsize " + counter);
                 //write condition where json is not null
                 try {JSONObject Jservingsize = (row.getJSONArray("c").getJSONObject(counter));
                 servingSize = Jservingsize.optString("v");
-                //System.out.println(servingSize);
                 counter++;}
 
                 catch (JSONException ex) {
                     counter++;
                     JSONObject Jservingsize = (row.getJSONArray("c").getJSONObject(counter));
                    servingSize = Jservingsize.optString("v");
-                    //System.out.println(servingSize);
                     counter++;
                 }
 
                 //System.out.println("Calories" + counter);
                 try {JSONObject Jcalories = (row.getJSONArray("c").getJSONObject(counter));
                 calories = Jcalories.optString("v");
-                //System.out.println(calories);
                 counter++;}
 
                 catch (JSONException ex) {
                     counter++;
                     JSONObject Jcalories = (row.getJSONArray("c").getJSONObject(counter));
                     calories = Jcalories.optString("v");
-                    //System.out.println(calories);
                     counter++;
                 }
 
 
                 try {JSONObject Jequipment = (row.getJSONArray("c").getJSONObject(counter));
                 equipment = Jequipment.optString("v");
-                //System.out.println(equipment);
                 counter++;}
                 catch(JSONException ex) {
                     counter++;
                     JSONObject Jequipment = (row.getJSONArray("c").getJSONObject(counter));
                     equipment = Jequipment.optString("v");
-                    //System.out.println(equipment);
                     counter++;
 
                 }
 
 
-                //System.out.println("Here are the ingredients");
                 try {JSONObject Jingredients = (row.getJSONArray("c").getJSONObject(counter));
                 ingredients = Jingredients.optString("v");
-                //System.out.println(ingredients);
                 counter++;}
                 catch(JSONException ex) {
                     counter++;
                     JSONObject Jingredients = (row.getJSONArray("c").getJSONObject(counter));
                     ingredients = Jingredients.optString("v");
-                    //System.out.println(ingredients);
                     counter++;
 
                 }
@@ -150,14 +126,12 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
 
                 try {JSONObject Jdirections = (row.getJSONArray("c").getJSONObject(counter));
                  directions = Jdirections.optString("v");
-                //System.out.println(directions);
                 counter++;}
 
                 catch (JSONException ex) {
                     counter++;
                     JSONObject Jdirections = (row.getJSONArray("c").getJSONObject(counter));
                     directions = Jdirections.optString("v");
-                    //System.out.println(directions);
                     counter++;
 
                 }
@@ -165,14 +139,12 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
 
                 try {JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
                 shortdesc = Jshortdesc.optString("v");
-                //System.out.println(shortdesc);
                 }
 
                 catch (JSONException ex) {
                     counter++;
                     JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
                     shortdesc = Jshortdesc.optString("v");
-                    //System.out.println(shortdesc);
                 }
 
 
@@ -197,7 +169,6 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
 
                 );
                 nutritionList.add(nutrition);
-                //System.out.println(nutrition);
             }
 
         } catch (JSONException e) {

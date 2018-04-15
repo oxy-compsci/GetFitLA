@@ -4,50 +4,52 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 
+import java.lang.ref.SoftReference;
+
 //Formats Information to be easily called
 public class ExerciseItemFormat implements Parcelable {
     private int id;
-    private String title;
+    private String name;
     private String shortdesc;
-    private String rating;
-    private String price;
+    private String isboolean;
+    private String equipment;
+    private String instructions;
     private int image;
 
-    public ExerciseItemFormat(int id, String title, String shortdesc, String rating, String price, int image) {
+
+    public ExerciseItemFormat(int id, String name,
+                               String shortdesc, String isboolean, String equipment, String instructions, int image) {
         this.id = id;
-        this.title = title;
+        this.name = name;
         this.shortdesc = shortdesc;
-        this.rating = rating;
-        this.price = price;
+        this.isboolean = isboolean;
+        this.equipment = equipment;
+        this.instructions = instructions;
         this.image = image;
+
     }
 
     public int getId() {
         return id;
     }
-
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
-
     public String getShortdesc() {
         return shortdesc;
     }
-
-    public String getRating() {
-        return rating;
+    public String getIsboolean() {
+        return isboolean;
     }
-
-    public String getPrice() {
-        return price;
+    public String getEquipment() {return equipment;}
+    public String getInstructions() {
+        return instructions;
     }
-
     public int getImage() {
         return image;
     }
 
     //begin parcel shit
-
     @Override
     public int describeContents() {
         return 0;
@@ -56,20 +58,24 @@ public class ExerciseItemFormat implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(this.id);
-        dest.writeString(this.title);
+        dest.writeString(this.name);
         dest.writeString(this.shortdesc);
-        dest.writeString(this.rating);
-        dest.writeString(this.price);
+        dest.writeString(this.isboolean);
+        dest.writeString(this.equipment);
+        dest.writeString(this.instructions);
         dest.writeInt(this.image);
+
     }
 
     protected ExerciseItemFormat(Parcel in) {
         this.id = in.readInt();
-        this.title = in.readString();
+        this.name = in.readString();
         this.shortdesc = in.readString();
-        this.rating = in.readString();
-        this.price = in.readString();
+        this.isboolean = in.readString();
+        this.equipment = in.readString();
+        this.instructions = in.readString();
         this.image = in.readInt();
+
     }
 
     public static final Parcelable.Creator<ExerciseItemFormat> CREATOR = new Parcelable.Creator<ExerciseItemFormat>() {

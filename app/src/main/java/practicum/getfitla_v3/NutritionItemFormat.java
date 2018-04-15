@@ -11,7 +11,6 @@ public class NutritionItemFormat implements Parcelable {
     private int id;
     private String name;
     private String shortdesc;
-    private String rating;
     private String price;
     private int image;
     private String prepTime;
@@ -30,7 +29,6 @@ public class NutritionItemFormat implements Parcelable {
         this.id = id;
         this.name = name;
         this.shortdesc = shortdesc;
-        this.rating = rating;
         this.price = price;
         this.image = image;
         this.prepTime = preptime;
@@ -51,10 +49,6 @@ public class NutritionItemFormat implements Parcelable {
 
     public String getShortdesc() {
         return shortdesc;
-    }
-
-    public String getRating() {
-        return rating;
     }
 
     public String getPrice() {
@@ -89,7 +83,6 @@ public class NutritionItemFormat implements Parcelable {
         dest.writeInt(this.id);
         dest.writeString(this.name);
         dest.writeString(this.shortdesc);
-        dest.writeString(this.rating);
         dest.writeString(this.price);
         dest.writeInt(this.image);
         dest.writeString(this.prepTime);
@@ -104,7 +97,6 @@ public class NutritionItemFormat implements Parcelable {
         this.id = in.readInt();
         this.name = in.readString();
         this.shortdesc = in.readString();
-        this.rating = in.readString();
         this.price = in.readString();
         this.image = in.readInt();
         this.prepTime = in.readString();
@@ -115,15 +107,15 @@ public class NutritionItemFormat implements Parcelable {
         this.ingredients = in.readString();
     }
 
-    public static final Parcelable.Creator<ExerciseItemFormat> CREATOR = new Parcelable.Creator<ExerciseItemFormat>() {
+    public static final Parcelable.Creator<NutritionItemFormat> CREATOR = new Parcelable.Creator<NutritionItemFormat>() {
         @Override
-        public ExerciseItemFormat createFromParcel(Parcel source) {
-            return new ExerciseItemFormat(source);
+        public NutritionItemFormat createFromParcel(Parcel source) {
+            return new NutritionItemFormat(source);
         }
 
         @Override
-        public ExerciseItemFormat[] newArray(int size) {
-            return new ExerciseItemFormat[size];
+        public NutritionItemFormat[] newArray(int size) {
+            return new NutritionItemFormat[size];
         }
     };
 }

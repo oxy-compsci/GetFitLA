@@ -39,10 +39,10 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
     public void onBindViewHolder(itemViewHolder holder, int position) {
         ExerciseItemFormat exercise = fullList.get(position);
 
-        holder.textViewTitle.setText(exercise.getTitle());
+        holder.textViewTitle.setText(exercise.getName());
         holder.textViewShortDesc.setText(exercise.getShortdesc());
-        holder.textViewRating.setText(String.valueOf(exercise.getRating()));
-        holder.textViewPrice.setText(String.valueOf(exercise.getPrice()));
+        //holder.textViewRating.setText(String.valueOf(exercise.getRating()));
+        //holder.textViewPrice.setText(String.valueOf(exercise.getPrice()));
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
 
 

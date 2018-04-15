@@ -17,8 +17,9 @@ public class ExerciseDetailActivity extends AppCompatActivity{
     private int passedid;
     private String passedtitle;
     private String passedshortdesc;
-    private String passedrating;
-    private String passedprice;
+    private String passedisboolean;
+    private String passedequipment;
+    private String passedinstructions;
     private int passedimage;
 
 
@@ -36,10 +37,11 @@ public class ExerciseDetailActivity extends AppCompatActivity{
         //Bundle data = getIntent().getExtras();
         ExerciseItemFormat CurItem = (ExerciseItemFormat) data.getParcelable("ExerciseInfo");
         passedid = CurItem.getId();
-        passedtitle = CurItem.getTitle();
+        passedtitle = CurItem.getName();
         passedshortdesc = CurItem.getShortdesc();
-        passedrating = CurItem.getRating();
-        passedprice = CurItem.getPrice();
+        passedisboolean = CurItem.getIsboolean();
+        passedequipment = CurItem.getEquipment();
+        passedinstructions = CurItem.getInstructions();
         passedimage = CurItem.getImage();
         System.out.println(passedshortdesc);
 

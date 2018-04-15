@@ -21,54 +21,109 @@ import android.content.Intent;
 public class Exercise extends AppCompatActivity implements ItemClickListener {
 
     static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=10ZQ7w7r1U6LM4VPAVaMQ3nOPIBHZ7qXcUFgA66wwjys";
-    //object is ExerciseItemFormat
-    public ArrayList<ExerciseItemFormat> exerciseList = new ArrayList<>();
-    RecyclerView recyclerView;
+
     //creating instances of adaptor to link to the recyclerview
-
-
+    RecyclerView recyclerView;
+    //object is ExerciseItemFormat
+    public List<ExerciseItemFormat> exerciseList = new ArrayList<>();
 
     private ExerciseListAdapter mAdapter;
 
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
-            System.out.println(rows);
-            //rows = object.getJSONArray("c");
+
+            int id;
+            String name;
+            String shortdesc;
+            String isboolean;
+            String equipment;
+            String instructions;
+            int image;
 
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
                 //System.out.println(rows.getJSONObject(row_id));
-
 
                 JSONObject row = rows.getJSONObject(row_id);
                 //System.out.println(row);
                 //SONArray columns = row.getJSONArray("c");
 
-                JSONObject Jtitle = (row.getJSONArray("c").getJSONObject(0));
-                String title = Jtitle.optString("v");
-                System.out.println(title);
+                //counter for index
+                int counter = 0;
 
-                JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(1));
-                String shortdesc = Jshortdesc.optString("v");
+                try {
+                JSONObject Jname = (row.getJSONArray("c").getJSONObject(counter));
+                name = Jname.optString("v");
+                counter++;
+                System.out.println(name); }
+                catch (JSONException ex) {
+                    counter++;
+                    JSONObject Jname = (row.getJSONArray("c").getJSONObject(counter));
+                    name = Jname.optString("v");
+                    counter++;
+                }
+
+                try {
+                    JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
+                shortdesc = Jshortdesc.optString("v");
                 System.out.println(shortdesc);
+                counter++;}
+                catch(JSONException ex) {
+                    counter++;
+                    JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
+                    shortdesc = Jshortdesc.optString("v");
+                    System.out.println(shortdesc);
+                    counter++;
+                }
 
-                JSONObject Jrating = (row.getJSONArray("c").getJSONObject(2));
-                String rating = Jrating.optString("v");
-                System.out.println(rating);
 
-                JSONObject Jprice = (row.getJSONArray("c").getJSONObject(3));
-                String price = Jprice.optString("v");
-                System.out.println(price);
+                try {
+                    JSONObject Jisboolean = (row.getJSONArray("c").getJSONObject(counter));
+                    isboolean = Jisboolean.optString("v");
+                    counter++;
+                    System.out.println(isboolean); }
+                catch (JSONException ex) {
+                    counter++;
+                    JSONObject Jisboolean = (row.getJSONArray("c").getJSONObject(counter));
+                    isboolean = Jisboolean.optString("v");
+                    counter++;
+                }
+
+                try{JSONObject Jequipment = (row.getJSONArray("c").getJSONObject(counter));
+                equipment = Jequipment.optString("v");
+                System.out.println(equipment);
+                counter++;}
+                catch (JSONException ex) {
+                    counter++;
+                    JSONObject Jequipment = (row.getJSONArray("c").getJSONObject(counter));
+                    equipment = Jequipment.optString("v");
+                    System.out.println(equipment);
+                    counter++;}
+
+                try{
+                JSONObject Jinstructions = (row.getJSONArray("c").getJSONObject(counter));
+                instructions = Jinstructions.optString("v");
+                counter++;
+                System.out.println(instructions);}
+
+                catch (JSONException ex) {
+                    counter++;
+                    JSONObject Jinstructions = (row.getJSONArray("c").getJSONObject(counter));
+                    instructions = Jinstructions.optString("v");
+                    System.out.println(instructions);
+                    counter++;
+                }
                 //Integer image = Integer.parseInt((row.getJSONArray("c").getString(4)));
-                Integer image = R.drawable.building; // Temporary fix until we have images
+                image = R.drawable.building; // Temporary fix until we have images
 
                 //creates a new instance of exercise for each exercise type
                 ExerciseItemFormat exercise = new ExerciseItemFormat(
                         row_id,
-                        title,
+                        name,
+                        isboolean,
                         shortdesc,
-                        rating,
-                        price,
+                        equipment,
+                        instructions,
                         image);
                 exerciseList.add(exercise);
             }
