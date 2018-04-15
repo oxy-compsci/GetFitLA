@@ -1,19 +1,14 @@
 package practicum.getfitla_v3;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
-
 
 import java.util.List;
-
-import static android.support.v4.content.ContextCompat.startActivity;
 /**
  * This is the class that binds the raw data to a specific item held within the recyclerview. 
 *Following link(s) were used to implement the Adapter
@@ -26,16 +21,15 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     private List<NutritionItemFormat> fullList;
     private ItemClickListener clickListener;
 
-    public NutritionListAdapter(Context mtcx, List<NutritionItemFormat> exerciseList) {
+    public NutritionListAdapter(Context mtcx, List<NutritionItemFormat> nutritionList) {
         this.mtcx = mtcx;
-        this.fullList = exerciseList;
+        this.fullList = nutritionList;
     }
 
     @Override
     public itemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mtcx);
-        View view = inflater.inflate(R.layout.list_layout, null);
-        // itemViewHolder holder = new itemViewHolder(view);
+        View view = inflater.inflate(R.layout.list_layout_nutrition, null);
         //creates a viewholder by returning an instance of the viewholder class
         return new itemViewHolder(view);
     }
@@ -44,11 +38,15 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     public void onBindViewHolder(itemViewHolder holder, int position) {
         NutritionItemFormat nutrition = fullList.get(position);
         //binds data to our viewholder
-
+        System.out.println(nutrition.getTitle()+ "\n" + nutrition.getPrepTime());
         holder.textViewTitle.setText(nutrition.getTitle());
-        holder.textViewShortDesc.setText(nutrition.getShortdesc());
-        holder.textViewRating.setText(String.valueOf(nutrition.getRating()));
-        holder.textViewPrice.setText(String.valueOf(nutrition.getPrice()));
+        holder.textViewPrepTime.setText(nutrition.getPrepTime());
+        holder.textViewServingSize.setText(nutrition.getServingSize());
+        holder.textViewCalories.setText(nutrition.getCalories());
+        holder.textViewEquipment.setText(nutrition.getEquipment());
+        holder.textViewIngredients.setText(nutrition.getIngredients());
+        holder.textViewProcedure.setText(nutrition.getProcedure());
+        holder.textViewNotes.setText(nutrition.getNotes());
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(nutrition.getImage()));
     }
 
@@ -69,18 +67,29 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     public class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         //This is the actual class that contains all the relevant information in a given entry
         ImageView imageview;
-        TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
+        TextView textViewTitle,
+                textViewPrepTime,
+                textViewServingSize,
+                textViewCalories,
+                textViewEquipment,
+                textViewIngredients,
+                textViewProcedure,
+                textViewNotes;
 
 
         public itemViewHolder(View itemView) {
             super(itemView);
             //Code meant for information of each entry
+            // setting up viewholder
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
-            textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
-            textViewRating = itemView.findViewById(R.id.textViewRating);
-            textViewPrice = itemView.findViewById(R.id.textViewPrice);
+            textViewPrepTime = itemView.findViewById(R.id.textViewPrepTime);
+            textViewServingSize = itemView.findViewById(R.id.textViewServingSize);
+            textViewCalories = itemView.findViewById(R.id.textViewCalories);
+            textViewEquipment = itemView.findViewById(R.id.textViewEquipment);
+            textViewIngredients = itemView.findViewById(R.id.textViewIngredients);
+            textViewProcedure= itemView.findViewById(R.id.textViewProcedure);
+            textViewNotes = itemView.findViewById(R.id.textViewNotes);
             imageview = itemView.findViewById(R.id.imageView);
-
             //Code that is specifically for the OnClickListener
             itemView.setTag(itemView);
             //sets each instance of OnClickListener to the item
