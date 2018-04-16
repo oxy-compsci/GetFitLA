@@ -2,9 +2,6 @@ package practicum.getfitla_v3;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.v7.app.AppCompatActivity;
-
-import java.lang.ref.SoftReference;
 
 //Formats Information to be easily called
 public class NutritionItemFormat implements Parcelable {
@@ -23,9 +20,9 @@ public class NutritionItemFormat implements Parcelable {
     public NutritionItemFormat(int id, String name,
                                String shortdesc,
                                //String rating,
-                              // String price,
+                               // String price,
                                int image, String preptime, String servingSize, String calories,
-                              String equipment, String process, String ingredients) {
+                               String equipment, String process, String ingredients) {
         this.id = id;
         this.name = name;
         this.shortdesc = shortdesc;
@@ -59,17 +56,29 @@ public class NutritionItemFormat implements Parcelable {
         return image;
     }
 
-    public String getPrepTime() {return prepTime;}
+    public String getPrepTime() {
+        return prepTime;
+    }
 
-    public String getServingSize() {return servingSize;}
+    public String getServingSize() {
+        return servingSize;
+    }
 
-    public String getCalories() {return calories;}
+    public String getCalories() {
+        return calories;
+    }
 
-    public String getEquipment() {return equipment;}
+    public String getEquipment() {
+        return equipment;
+    }
 
-    public String getProcess() {return process;}
+    public String getProcess() {
+        return process;
+    }
 
-    public String getIngredients() {return ingredients;}
+    public String getIngredients() {
+        return ingredients;
+    }
 
     //begin parcel shit
 

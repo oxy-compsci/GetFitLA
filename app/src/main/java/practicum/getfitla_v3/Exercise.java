@@ -1,5 +1,6 @@
 package practicum.getfitla_v3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,10 +13,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import android.content.Intent;
-
-
 
 
 public class Exercise extends AppCompatActivity implements ItemClickListener {
@@ -51,20 +48,20 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 int counter = 0;
 
                 try {
-                name = row.getJSONArray("c").getJSONObject(counter).optString("v");
-                counter++;
-                System.out.println(name); }
-                catch (JSONException ex) {
+                    name = row.getJSONArray("c").getJSONObject(counter).optString("v");
+                    counter++;
+                    System.out.println(name);
+                } catch (JSONException ex) {
                     counter++;
                     name = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
                 }
 
                 try {
-                shortdesc = row.getJSONArray("c").getJSONObject(counter).optString("v");
-                System.out.println(shortdesc);
-                counter++;}
-                catch(JSONException ex) {
+                    shortdesc = row.getJSONArray("c").getJSONObject(counter).optString("v");
+                    System.out.println(shortdesc);
+                    counter++;
+                } catch (JSONException ex) {
                     counter++;
                     shortdesc = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     System.out.println(shortdesc);
@@ -75,27 +72,27 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 try {
                     isboolean = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
-                    System.out.println(isboolean); }
-                catch (JSONException ex) {
+                    System.out.println(isboolean);
+                } catch (JSONException ex) {
                     counter++;
                     isboolean = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
                 }
 
-                try{
-                equipment = row.getJSONArray("c").getJSONObject(counter).optString("v");
-                counter++;}
-                catch (JSONException ex) {
+                try {
+                    equipment = row.getJSONArray("c").getJSONObject(counter).optString("v");
+                    counter++;
+                } catch (JSONException ex) {
                     counter++;
                     equipment = row.getJSONArray("c").getJSONObject(counter).optString("v");
-                    counter++;}
+                    counter++;
+                }
 
-                try{
-                instructions = row.getJSONArray("c").getJSONObject(counter).optString("v");
-                counter++;
-                System.out.println(instructions);}
-
-                catch (JSONException ex) {
+                try {
+                    instructions = row.getJSONArray("c").getJSONObject(counter).optString("v");
+                    counter++;
+                    System.out.println(instructions);
+                } catch (JSONException ex) {
                     counter++;
                     instructions = row.getJSONArray("c").getJSONObject(counter).optString("v");
 
@@ -152,14 +149,12 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
     }
 
 
-
-
     @Override
     public void onClick(View view, int position) {
 
         ExerciseItemFormat current = exerciseList.get(position);
         Intent intent = new Intent(this, ExerciseDetailActivity.class);
-      //  ArrayList<ExerciseItemFormat> passedExercise = exerciseList;
+        //  ArrayList<ExerciseItemFormat> passedExercise = exerciseList;
 
         intent.putExtra("ExerciseInfo", current);
 

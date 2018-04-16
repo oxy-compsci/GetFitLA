@@ -1,26 +1,22 @@
 package practicum.getfitla_v3;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
-
 
 import java.util.List;
 
-import static android.support.v4.content.ContextCompat.startActivity;
 /**
- * This is the class that binds the raw data to a specific item held within the recyclerview. 
-*Following link(s) were used to implement the Adapter
-* https://www.simplifiedcoding.net/android-recyclerview-cardview-tutorial/#RecyclerView-Item-Layout-using-CardView
-* http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/
-*/
-public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdapter.itemViewHolder>{
+ * This is the class that binds the raw data to a specific item held within the recyclerview.
+ * Following link(s) were used to implement the Adapter
+ * https://www.simplifiedcoding.net/android-recyclerview-cardview-tutorial/#RecyclerView-Item-Layout-using-CardView
+ * http://www.codexpedia.com/android/defining-item-click-listener-for-recyclerview-in-android/
+ */
+public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdapter.itemViewHolder> {
 
     private Context mtcx;
     private List<NutritionItemFormat> fullList;
@@ -66,7 +62,7 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
 
     }
 
-    public class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         //This is the actual class that contains all the relevant information in a given entry
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
@@ -91,14 +87,13 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
         @Override
         public void onClick(View view) {
             //If the onClick detects a click but it is not connected to the Arraylist, it will return a null
-           if (clickListener == null) {
-               //Debug code to indicate failure
-               System.out.println("I Failed!");
-            //successful click
-           } else {
-               clickListener.onClick(view, getAdapterPosition());
-           }
-
+            if (clickListener == null) {
+                //Debug code to indicate failure
+                System.out.println("I Failed!");
+                //successful click
+            } else {
+                clickListener.onClick(view, getAdapterPosition());
+            }
 
 
         }

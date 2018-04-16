@@ -1,16 +1,8 @@
 package practicum.getfitla_v3;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 //Please ignore this page for now, this is a dummy page
 public class ExerciseDetailActivity extends AppCompatActivity{
@@ -45,9 +37,9 @@ public class ExerciseDetailActivity extends AppCompatActivity{
         passedimage = CurItem.getImage();
         System.out.println(passedshortdesc);
 
-        TextView title = (TextView)findViewById(R.id.exercise_title);
+        TextView title = (TextView) findViewById(R.id.exercise_title);
         title.setText(passedtitle);
-        TextView guide = (TextView)findViewById(R.id.exercise_guide);
+        TextView guide = (TextView) findViewById(R.id.exercise_guide);
         guide.setText(passedshortdesc);
 
 

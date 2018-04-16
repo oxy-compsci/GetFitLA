@@ -7,15 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
-
-
 
 import java.util.List;
 
 //For more information about the code, please check out the NutritionListAdapter as they are functionally identical
 
-public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapter.itemViewHolder>{
+public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapter.itemViewHolder> {
 
     private Context mtcx;
     private List<ExerciseItemFormat> fullList;
@@ -46,7 +43,6 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
 
 
-
     }
 
     @Override
@@ -54,13 +50,14 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
         return fullList == null ? 0 : fullList.size();
 
     }
+
     public void setClickListener(ItemClickListener itemClickListener) {
         this.clickListener = itemClickListener;
 
     }
 
 
-    class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
 

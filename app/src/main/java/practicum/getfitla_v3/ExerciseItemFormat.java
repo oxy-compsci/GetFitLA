@@ -2,9 +2,6 @@ package practicum.getfitla_v3;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.v7.app.AppCompatActivity;
-
-import java.lang.ref.SoftReference;
 
 //Formats Information to be easily called
 public class ExerciseItemFormat implements Parcelable {
@@ -18,7 +15,7 @@ public class ExerciseItemFormat implements Parcelable {
 
 
     public ExerciseItemFormat(int id, String name,
-                               String shortdesc, String isboolean, String equipment, String instructions, int image) {
+                              String shortdesc, String isboolean, String equipment, String instructions, int image) {
         this.id = id;
         this.name = name;
         this.shortdesc = shortdesc;
@@ -32,19 +29,27 @@ public class ExerciseItemFormat implements Parcelable {
     public int getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
+
     public String getShortdesc() {
         return shortdesc;
     }
+
     public String getIsboolean() {
         return isboolean;
     }
-    public String getEquipment() {return equipment;}
+
+    public String getEquipment() {
+        return equipment;
+    }
+
     public String getInstructions() {
         return instructions;
     }
+
     public int getImage() {
         return image;
     }
