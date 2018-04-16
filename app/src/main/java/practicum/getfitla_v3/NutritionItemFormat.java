@@ -17,7 +17,7 @@ public class NutritionItemFormat implements Parcelable {
     private String servingSize;
     private String calories;
     private String equipment;
-    private String directions;
+    private String process;
     private String ingredients;
 
     public NutritionItemFormat(int id, String name,
@@ -25,7 +25,7 @@ public class NutritionItemFormat implements Parcelable {
                                //String rating,
                               // String price,
                                int image, String preptime, String servingSize, String calories,
-                              String equipment, String directions, String ingredients) {
+                              String equipment, String process, String ingredients) {
         this.id = id;
         this.name = name;
         this.shortdesc = shortdesc;
@@ -35,7 +35,7 @@ public class NutritionItemFormat implements Parcelable {
         this.servingSize = servingSize;
         this.calories = calories;
         this.equipment = equipment;
-        this.directions = directions;
+        this.process = process;
         this.ingredients = ingredients;
     }
 
@@ -67,7 +67,7 @@ public class NutritionItemFormat implements Parcelable {
 
     public String getEquipment() {return equipment;}
 
-    public String getDirections() {return directions;}
+    public String getProcess() {return process;}
 
     public String getIngredients() {return ingredients;}
 
@@ -89,7 +89,7 @@ public class NutritionItemFormat implements Parcelable {
         dest.writeString(this.servingSize);
         dest.writeString(this.calories);
         dest.writeString(this.equipment);
-        dest.writeString(this.directions);
+        dest.writeString(this.process);
         dest.writeString(this.ingredients);
     }
 
@@ -103,7 +103,7 @@ public class NutritionItemFormat implements Parcelable {
         this.servingSize = in.readString();
         this.calories = in.readString();
         this.equipment = in.readString();
-        this.directions = in.readString();
+        this.process = in.readString();
         this.ingredients = in.readString();
     }
 

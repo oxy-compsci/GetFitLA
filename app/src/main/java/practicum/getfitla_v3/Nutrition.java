@@ -1,4 +1,6 @@
 package practicum.getfitla_v3;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,16 +11,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 import java.util.ArrayList;
 import java.util.List;
-
-import android.content.Intent;
 
 /**
  * An activity that displays a the list of Recipe Items
  */
-public class Nutrition extends AppCompatActivity implements ItemClickListener{
+public class Nutrition extends AppCompatActivity implements ItemClickListener {
 
     static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=1a6YXr5Tf_nREmb9byNWLLtpKZEfIUPnDq1JLsaMXWig";
 
@@ -44,7 +43,7 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
             String servingSize;
             String calories;
             String equipment;
-            String directions;
+            String process;
             String ingredients;
 
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
@@ -54,117 +53,102 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
                 //initialize secondary counter to control for the index
                 int counter = 0;
                 //added try/catch exceptions because of null values in Json files
-                try{     JSONObject Jname = (row.getJSONArray("c").getJSONObject(counter));
-                          name = Jname.optString("v");
-                         counter++;}
-                         catch (JSONException ex)
-                {                    counter++;
+                try {
+                    name = row.getJSONArray("c").getJSONObject(counter).optString("v");
 
-                    JSONObject Jname = (row.getJSONArray("c").getJSONObject(counter));
-                    name = Jname.optString("v");
+                    counter++;
+                } catch (JSONException ex) {
+                    counter++;
+                    name = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
                 }
 
-                try{JSONObject JprepTime = (row.getJSONArray("c").getJSONObject(counter));
-                prepTime = JprepTime.optString("v");
-                counter++;}
-                catch (JSONException ex) {
+                try {
+                    prepTime = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
-                    JSONObject JprepTime = (row.getJSONArray("c").getJSONObject(counter));
-                    prepTime = JprepTime.optString("v");
+                } catch (JSONException ex) {
                     counter++;
-                    }
+                    prepTime = row.getJSONArray("c").getJSONObject(counter).optString("v");
+                    counter++;
+                }
 
                 //write condition where json is not null
-                try {JSONObject Jservingsize = (row.getJSONArray("c").getJSONObject(counter));
-                servingSize = Jservingsize.optString("v");
-                counter++;}
-
-                catch (JSONException ex) {
+                try {
+                    servingSize = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
-                    JSONObject Jservingsize = (row.getJSONArray("c").getJSONObject(counter));
-                   servingSize = Jservingsize.optString("v");
+                } catch (JSONException ex) {
+                    counter++;
+                    servingSize = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
                 }
-
                 //System.out.println("Calories" + counter);
-                try {JSONObject Jcalories = (row.getJSONArray("c").getJSONObject(counter));
-                calories = Jcalories.optString("v");
-                counter++;}
-
-                catch (JSONException ex) {
+                try {
+                    calories = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
-                    JSONObject Jcalories = (row.getJSONArray("c").getJSONObject(counter));
-                    calories = Jcalories.optString("v");
+                } catch (JSONException ex) {
+                    counter++;
+                    calories = row.getJSONArray("c").getJSONObject(counter).optString("v");
+                    counter++;
+                }
+
+                try {
+                    equipment = row.getJSONArray("c").getJSONObject(counter).optString("v");
+                    counter++;
+                } catch (JSONException ex) {
+                    counter++;
+                    equipment = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
                 }
 
 
-                try {JSONObject Jequipment = (row.getJSONArray("c").getJSONObject(counter));
-                equipment = Jequipment.optString("v");
-                counter++;}
-                catch(JSONException ex) {
+                try {
+                    JSONObject Jingredients = (row.getJSONArray("c").getJSONObject(counter));
+                    ingredients = Jingredients.optString("v");
                     counter++;
-                    JSONObject Jequipment = (row.getJSONArray("c").getJSONObject(counter));
-                    equipment = Jequipment.optString("v");
-                    counter++;
-
-                }
-
-
-                try {JSONObject Jingredients = (row.getJSONArray("c").getJSONObject(counter));
-                ingredients = Jingredients.optString("v");
-                counter++;}
-                catch(JSONException ex) {
+                } catch (JSONException ex) {
                     counter++;
                     JSONObject Jingredients = (row.getJSONArray("c").getJSONObject(counter));
                     ingredients = Jingredients.optString("v");
                     counter++;
-
                 }
 
-
-                try {JSONObject Jdirections = (row.getJSONArray("c").getJSONObject(counter));
-                 directions = Jdirections.optString("v");
-                counter++;}
-
-                catch (JSONException ex) {
+                try {
+                    JSONObject Jprocess = (row.getJSONArray("c").getJSONObject(counter));
+                    process = Jprocess.optString("v");
                     counter++;
-                    JSONObject Jdirections = (row.getJSONArray("c").getJSONObject(counter));
-                    directions = Jdirections.optString("v");
+                } catch (JSONException ex) {
                     counter++;
-
+                    JSONObject Jprocess = (row.getJSONArray("c").getJSONObject(counter));
+                    process = Jprocess.optString("v");
+                    counter++;
                 }
 
-
-                try {JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
-                shortdesc = Jshortdesc.optString("v");
-                }
-
-                catch (JSONException ex) {
+                try {
+                    JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
+                    shortdesc = Jshortdesc.optString("v");
+                } catch (JSONException ex) {
                     counter++;
                     JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
                     shortdesc = Jshortdesc.optString("v");
                 }
 
 
-
                 //Integer image = Integer.parseInt((row.getJSONArray("c").getString(4)));
-                image = R.drawable.building; // Temporary fix until we have images
+                image = R.drawable.nutrition; // Temporary fix until we have images
 
                 NutritionItemFormat nutrition = new NutritionItemFormat(
                         row_id,
                         name,
                         shortdesc,
                         image,
-                       // rating,
-                     //   price,
+                        // rating,
+                        //   price,
 
                         prepTime,
                         servingSize,
                         calories,
                         equipment,
-                        directions,
+                        process,
                         ingredients
 
                 );
@@ -210,6 +194,7 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
         }).execute(EXERCISE_SHEET_URL);
 
     }
+
     //Begin launching new activity
     @Override
     public void onClick(View view, int position) {
@@ -220,7 +205,6 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener{
 
         startActivity(intent);
     }
-
 
 
 }

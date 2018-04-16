@@ -17,7 +17,7 @@ public class NutritionDetailActivity extends AppCompatActivity{
     private String passedservingSize;
     private String passedcalories;
     private String passedequipment;
-    private String passeddirections;
+    private String passedprocess;
     private String passedingredients;
 
 
@@ -40,7 +40,7 @@ public class NutritionDetailActivity extends AppCompatActivity{
         passedservingSize = CurItem.getServingSize();
         passedcalories = CurItem.getCalories();
         passedequipment = CurItem.getEquipment();
-        passeddirections = CurItem.getDirections();
+        passedprocess = CurItem.getProcess();
         passedingredients = CurItem.getIngredients();
         passedimage = CurItem.getImage();
         System.out.println(passedshortdesc);
@@ -48,7 +48,7 @@ public class NutritionDetailActivity extends AppCompatActivity{
         TextView title = (TextView)findViewById(R.id.recipe_title);
         title.setText(passedname);
         TextView guide = (TextView)findViewById(R.id.recipe_directions);
-        guide.setText(passeddirections);
+        guide.setText(passedprocess);
     }
 
 

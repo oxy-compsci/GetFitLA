@@ -20,7 +20,7 @@ import android.content.Intent;
 
 public class Exercise extends AppCompatActivity implements ItemClickListener {
 
-    static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=10ZQ7w7r1U6LM4VPAVaMQ3nOPIBHZ7qXcUFgA66wwjys";
+    static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc";
 
     //creating instances of adaptor to link to the recyclerview
     RecyclerView recyclerView;
@@ -47,74 +47,63 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 JSONObject row = rows.getJSONObject(row_id);
                 //System.out.println(row);
                 //SONArray columns = row.getJSONArray("c");
-
                 //counter for index
                 int counter = 0;
 
                 try {
-                JSONObject Jname = (row.getJSONArray("c").getJSONObject(counter));
-                name = Jname.optString("v");
+                name = row.getJSONArray("c").getJSONObject(counter).optString("v");
                 counter++;
                 System.out.println(name); }
                 catch (JSONException ex) {
                     counter++;
-                    JSONObject Jname = (row.getJSONArray("c").getJSONObject(counter));
-                    name = Jname.optString("v");
+                    name = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
                 }
 
                 try {
-                    JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
-                shortdesc = Jshortdesc.optString("v");
+                shortdesc = row.getJSONArray("c").getJSONObject(counter).optString("v");
                 System.out.println(shortdesc);
                 counter++;}
                 catch(JSONException ex) {
                     counter++;
-                    JSONObject Jshortdesc = (row.getJSONArray("c").getJSONObject(counter));
-                    shortdesc = Jshortdesc.optString("v");
+                    shortdesc = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     System.out.println(shortdesc);
                     counter++;
                 }
 
 
                 try {
-                    JSONObject Jisboolean = (row.getJSONArray("c").getJSONObject(counter));
-                    isboolean = Jisboolean.optString("v");
+                    isboolean = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
                     System.out.println(isboolean); }
                 catch (JSONException ex) {
                     counter++;
-                    JSONObject Jisboolean = (row.getJSONArray("c").getJSONObject(counter));
-                    isboolean = Jisboolean.optString("v");
+                    isboolean = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;
                 }
 
-                try{JSONObject Jequipment = (row.getJSONArray("c").getJSONObject(counter));
-                equipment = Jequipment.optString("v");
-                System.out.println(equipment);
+                try{
+                equipment = row.getJSONArray("c").getJSONObject(counter).optString("v");
                 counter++;}
                 catch (JSONException ex) {
                     counter++;
-                    JSONObject Jequipment = (row.getJSONArray("c").getJSONObject(counter));
-                    equipment = Jequipment.optString("v");
-                    System.out.println(equipment);
+                    equipment = row.getJSONArray("c").getJSONObject(counter).optString("v");
                     counter++;}
 
                 try{
-                JSONObject Jinstructions = (row.getJSONArray("c").getJSONObject(counter));
-                instructions = Jinstructions.optString("v");
+                instructions = row.getJSONArray("c").getJSONObject(counter).optString("v");
                 counter++;
                 System.out.println(instructions);}
 
                 catch (JSONException ex) {
                     counter++;
-                    JSONObject Jinstructions = (row.getJSONArray("c").getJSONObject(counter));
-                    instructions = Jinstructions.optString("v");
+                    instructions = row.getJSONArray("c").getJSONObject(counter).optString("v");
+
                     System.out.println(instructions);
                     counter++;
                 }
                 //Integer image = Integer.parseInt((row.getJSONArray("c").getString(4)));
-                image = R.drawable.building; // Temporary fix until we have images
+                image = R.drawable.activities; // Temporary fix until we have images
 
                 //creates a new instance of exercise for each exercise type
                 ExerciseItemFormat exercise = new ExerciseItemFormat(
