@@ -8,7 +8,7 @@ public class ExerciseItemFormat implements Parcelable {
     private int id;
     private String name;
     private String shortdesc;
-    private String isboolean;
+    private String isboolean; //change this name
     private String equipment;
     private String instructions;
     private int image;
