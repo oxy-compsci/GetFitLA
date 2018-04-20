@@ -25,5 +25,13 @@
 
     <!-- Begin strings that take in data to from adapter to be used in the detailed activities-->
     <string name="Recipe_Title">Recipe</string>
+    <string name="Recipe_PrepTime">10 minutes</string>
+    <string name="Recipe_ServingSize">1 serving</string>
+    <string name="Recipe_Calories">100 calories</string>
+    <string name="Recipe_Equipment">Pot, Pan</string>
+    <string name="Recipe_Ingredients">-1 Veggie <br/> -2 Meats</string>
+    <string name="Recipe_Process">1) Put the veggie in the pot. <br/> 2) Put the meats in the pan.</string>
+    <string name="Exercise_Title">Exercise</string>
+    <string name="Exercise_Instructions">This is how you do the exercise.</string>
 >>>>>>> Stashed changes
 </resources>
