@@ -28,7 +28,6 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
-
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,
         OnMyLocationButtonClickListener,
         OnMyLocationClickListener,
@@ -37,35 +36,27 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private Location lastLocation = null;
     private FusedLocationProviderClient mFusedLocationProviderClient;
-
     private boolean mLocationPermissionGranted = false;
-
     // Create a static Tag string to help debug
     private static final String TAG = "MapsActivity";
-
     // request code for location permissions, see onRequestPermissionsResult()
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
-
 
     // Flag indicating whether a requested permission has been denied after returning in
     // {@link #onRequestPermissionsResult(int, String[], int[])}
     // TODO: Look at onRequestPermissionsResult() and find way to display missing permission error
     private boolean mPermissionDenied = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
 
     /**
      * Manipulates the map once available.
@@ -75,7 +66,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
         mMap.setOnMyLocationButtonClickListener(this);
         mMap.setOnMyLocationClickListener(this);
         updateLocationUI();
@@ -96,12 +86,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-
     @Override
     public void onMyLocationClick(@NonNull Location location) {
         Toast.makeText(this, "Current location:\n" + location, Toast.LENGTH_LONG).show();
     }
-
 
     @Override
     public boolean onMyLocationButtonClick() {
@@ -110,7 +98,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // (the camera animates to the user's current position).
         return false;
     }
-
 
     // Enables the My Location layer if the fine location permission has been granted.
     private void enableMyLocation() {
@@ -172,13 +159,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             mPermissionDenied = false;
         }
     }
-
     //Displays a dialog with error message explaining that the location permission is missing.
     private void showMissingPermissionError() {
         PermissionUtils.PermissionDeniedDialog
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
     }
-
 
     private void getDeviceLocation() {
     /*

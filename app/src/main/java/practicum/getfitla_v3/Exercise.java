@@ -6,11 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +26,6 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
         int cur;
         cur = counter;
         while (value == "") {
-            System.out.println("New Loop" + cur);
-
             try {
                 value = row.getJSONArray("c").getJSONObject(cur).optString("v");
                 cur++;
@@ -78,7 +74,7 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 Temp = add(x, counter, row);
                 instructions = Temp.get(0).toString();
 
-                //Integer image = Integer.parseInt((row.getJSONArray("c").getString(4)));
+                image = 0;
                 image = R.drawable.activities; // Temporary fix until we have images
 
                 //creates a new instance of exercise for each exercise type

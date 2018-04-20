@@ -24,7 +24,6 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
     RecyclerView recyclerView;
     //Creating a new list that will take object of type NutritionItemFormat, or specifically items that have been formatted
     public List<NutritionItemFormat> nutritionList = new ArrayList<>();
-    //Initializing my Adaptor
     private NutritionListAdapter mAdapter;
     public ArrayList add(String value, int counter, JSONObject row) {
         ArrayList Values = new ArrayList<>();
@@ -68,7 +67,6 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
                 String rating  = "";
                 String price = "";
                 String x = "";
-
                 //temporary holding arraylist of answers
                 Temp = add(x, counter,row);
                 //set passed variable to the needed value in the arraylist
@@ -102,7 +100,7 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
                 Temp = add(x, counter, row);
                 shortdesc = Temp.get(0).toString();
 
-                //Integer image = Integer.parseInt((row.getJSONArray("c").getString(4)));
+                image = 0;
                 image = R.drawable.nutrition; // Temporary fix until we have images
 
                 NutritionItemFormat nutrition = new NutritionItemFormat(
@@ -116,8 +114,8 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
                         equipment,
                         process,
                         ingredients,
-                         rating,
-                           price
+                        rating,
+                        price
                 );
                 nutritionList.add(nutrition);
             }
@@ -131,30 +129,29 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
         super.onCreate(savedInstanceState);
         //Take the layout provided in the xml
         setContentView(R.layout.nutrition);
-        final Nutrition ThisNutrition = this;
-
-        new DownloadWebpageTask(new AsyncCallback() {  //This essentially begins the whole database processing fiasco.
+        final Nutrition thisNutrition = this;
+        //This essentially begins the whole database processing fiasco.
+        new DownloadWebpageTask(new AsyncCallback() {
             @Override
             public void onResult(JSONObject object) {
                 processJson(object);
                 recyclerView = findViewById(R.id.reyclerView);
-                recyclerView.setHasFixedSize(true); //sets a fixed size for the recycler view size, not the elements in the recycler view
-                recyclerView.setLayoutManager(new LinearLayoutManager(ThisNutrition)); //setting the orientation of the recyclerview (by default it is vertical
-                //each item in the arraylist will be an object. Each object is created in the detail file and add()ed here
-                //this will become the google sheets feed soon
-                NutritionListAdapter adaptor = new NutritionListAdapter(ThisNutrition, nutritionList);
+                //sets a fixed size for the recycler view size, not the elements in the recycler view
+                recyclerView.setHasFixedSize(true);
+                //setting the orientation of the recyclerview (by default it is vertical
+                recyclerView.setLayoutManager(new LinearLayoutManager(thisNutrition));
+                //each item in the arraylist will be an object. Each object is created in the detail file and added here
+                NutritionListAdapter adaptor = new NutritionListAdapter(thisNutrition, nutritionList);
                 recyclerView.setAdapter(adaptor);
                 recyclerView.setHasFixedSize(true);
-                recyclerView.setLayoutManager(new LinearLayoutManager(ThisNutrition));
-                mAdapter = new NutritionListAdapter(ThisNutrition, nutritionList);
+                recyclerView.setLayoutManager(new LinearLayoutManager(thisNutrition));
+                mAdapter = new NutritionListAdapter(thisNutrition, nutritionList);
                 recyclerView.setAdapter(mAdapter);
-                mAdapter.setClickListener(ThisNutrition);
-                System.out.println("Here are the objects");
-                System.out.println(nutritionList);
+                mAdapter.setClickListener(thisNutrition);
             }
         }).execute(NutritionSheetUrl);
     }
-    //Begin launching new activity
+
     @Override
     public void onClick(View view, int position) {
         NutritionItemFormat current = nutritionList.get(position);
@@ -162,6 +159,4 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
         intent.putExtra("RecipeInfo", current);
         startActivity(intent);
     }
-
-
 }

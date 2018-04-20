@@ -19,7 +19,6 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
     private List<ExerciseItemFormat> fullList;
     private ItemClickListener clickListener;
 
-
     public ExerciseListAdapter(Context mtcx, List<ExerciseItemFormat> exerciseList) {
         this.mtcx = mtcx;
         this.fullList = exerciseList;
@@ -36,14 +35,10 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
     @Override
     public void onBindViewHolder(itemViewHolder holder, int position) {
         ExerciseItemFormat exercise = fullList.get(position);
-
-
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
         holder.textViewTitle.setText(exercise.getName());
         holder.textViewEquipment.setText(exercise.getEquipment());
         holder.textViewShortDesc.setText(exercise.getIsboolean());
-
-
     }
 
     @Override
@@ -62,26 +57,22 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc,  textViewEquipment;
 
-
         public itemViewHolder(View itemView) {
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
             textViewEquipment = itemView.findViewById(R.id.textViewEquipment);
             imageview = itemView.findViewById(R.id.imageView);
-
             itemView.setTag(itemView);
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-
             if (clickListener == null) {
                 System.out.println("I Failed!");
             } else {
                 clickListener.onClick(view, getAdapterPosition());
-
             }
         }
     }
