@@ -14,19 +14,19 @@
         android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/exercise_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:fontFamily="@font/alegreya"
-            android:text="@string/Exercise_Title"
+    <TextView
+        android:id="@+id/exercise_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/alegreya"
+        android:text="@string/Exercise_Title"
 
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_green_light"
-            android:textSize="36sp"/>
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_light"
+        android:textSize="36sp"/>
 
         <ImageView
             android:layout_width="30dp"
@@ -51,9 +51,8 @@
                 android:layout_marginEnd="19dp"
                 android:layout_marginRight="19dp"
                 android:fontFamily="@font/alegreya"
-                android:gravity="start"
                 android:textAlignment="viewStart"
                 android:textSize="18sp" />
-        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
