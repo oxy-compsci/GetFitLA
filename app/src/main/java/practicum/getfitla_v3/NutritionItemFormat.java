@@ -19,10 +19,9 @@ public class NutritionItemFormat implements Parcelable {
 
     public NutritionItemFormat(int id, String name,
                                String shortdesc,
-                               //String rating,
-                               // String price,
                                int image, String preptime, String servingSize, String calories,
-                               String equipment, String process, String ingredients) {
+                               String equipment, String process, String ingredients, String rating,
+                               String price) {
         this.id = id;
         this.name = name;
         this.shortdesc = shortdesc;

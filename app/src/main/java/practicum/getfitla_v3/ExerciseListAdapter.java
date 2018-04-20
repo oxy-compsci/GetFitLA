@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 //For more information about the code, please check out the NutritionListAdapter as they are functionally identical
+//FOR SOME REASON ISBOOLEAN IS SWITCHED WITH GET BOOLEN
 
 public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapter.itemViewHolder> {
 
@@ -36,11 +37,11 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
     public void onBindViewHolder(itemViewHolder holder, int position) {
         ExerciseItemFormat exercise = fullList.get(position);
 
-        holder.textViewTitle.setText(exercise.getName());
-        holder.textViewShortDesc.setText(exercise.getShortdesc());
-        //holder.textViewRating.setText(String.valueOf(exercise.getRating()));
-        //holder.textViewPrice.setText(String.valueOf(exercise.getPrice()));
+
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
+        holder.textViewTitle.setText(exercise.getName());
+        holder.textViewEquipment.setText(exercise.getEquipment());
+        holder.textViewShortDesc.setText(exercise.getIsboolean());
 
 
     }
@@ -59,15 +60,14 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
 
     class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageview;
-        TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
+        TextView textViewTitle, textViewShortDesc,  textViewEquipment;
 
 
         public itemViewHolder(View itemView) {
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
-            textViewRating = itemView.findViewById(R.id.textViewRating);
-            textViewPrice = itemView.findViewById(R.id.textViewPrice);
+            textViewEquipment = itemView.findViewById(R.id.textViewEquipment);
             imageview = itemView.findViewById(R.id.imageView);
 
             itemView.setTag(itemView);

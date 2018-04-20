@@ -40,7 +40,7 @@ public class ExerciseDetailActivity extends AppCompatActivity{
         TextView title = (TextView) findViewById(R.id.exercise_title);
         title.setText(passedtitle);
         TextView guide = (TextView) findViewById(R.id.exercise_guide);
-        guide.setText(passedshortdesc);
+        guide.setText(passedinstructions);
 
 
 

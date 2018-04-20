@@ -65,7 +65,7 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     public class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         //This is the actual class that contains all the relevant information in a given entry
         ImageView imageview;
-        TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
+        TextView textViewTitle, textViewShortDesc;
 
 
         public itemViewHolder(View itemView) {
@@ -73,8 +73,6 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
             //Code meant for information of each entry
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
-            textViewRating = itemView.findViewById(R.id.textViewRating);
-            textViewPrice = itemView.findViewById(R.id.textViewPrice);
             imageview = itemView.findViewById(R.id.imageView);
 
             //Code that is specifically for the OnClickListener

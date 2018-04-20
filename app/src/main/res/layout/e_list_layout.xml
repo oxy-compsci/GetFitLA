@@ -26,23 +26,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/imageView"
-                android:text="Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)"
+                android:text="Exercise"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textViewShortDesc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewTitle"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/imageView"
-                android:text="13.3 Inch, 256 GB"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
-
-            <TextView
-                android:id="@+id/textViewRating"
+                android:id="@+id/textViewEquipment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewShortDesc"
@@ -52,21 +41,24 @@
                 android:background="@color/colorPrimary"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:text="4.7"
+                android:text="Equipment"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textViewPrice"
-                android:layout_width="wrap_content"
+                android:id="@+id/textViewShortDesc"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textViewRating"
+                android:layout_below="@id/textViewTitle"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/imageView"
-                android:text="INR 56990"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textStyle="bold" />
+                android:text="Short Description"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+
+
+
 
         </RelativeLayout>
 
