@@ -248,6 +248,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                     }
                 }
+
+                kmlLayer.removeLayerFromMap();
             } catch (XmlPullParserException e) {
                 e.printStackTrace();
             } catch (IOException e) {
