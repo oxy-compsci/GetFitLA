@@ -20,5 +20,6 @@
     <string name="permission_rationale_location">Access to the location service is required to
         demonstrate the \'my location\' feature, which shows your current location on the map.</string>
     <string name="Title" translatable="false">Get Fit L.A.</string>
+    <string name="kml_url">http://www.google.com/maps/d/u/0/kml?forcekml=1&amp;mid=1LuVbYbhZpTtSep4GIRD0BEXWeKc</string>
 
 </resources>
