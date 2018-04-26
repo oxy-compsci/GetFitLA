@@ -8,8 +8,6 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,18 +17,15 @@ public class MainActivity extends AppCompatActivity {
     public void onClick_Maps(View view) {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
-
     }
 
     public void onClick_Exercise(View view) {
         Intent intent = new Intent(this, Exercise.class);
         startActivity(intent);
-
     }
 
     public void onClick_Nutrition(View view) {
         Intent intent = new Intent(this, Nutrition.class);
         startActivity(intent);
-
     }
 }
