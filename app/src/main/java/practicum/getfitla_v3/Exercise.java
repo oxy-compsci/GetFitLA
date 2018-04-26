@@ -21,21 +21,14 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
     public List<ExerciseItemFormat> exerciseList = new ArrayList<>();
     private ExerciseListAdapter mAdapter;
 
-    public ArrayList add(String value, int counter, JSONObject row) {
-        ArrayList Values = new ArrayList<>();
-        int cur;
-        cur = counter;
-        while (value == "") {
-            try {
-                value = row.getJSONArray("c").getJSONObject(cur).optString("v");
-                cur++;
-            } catch (JSONException ex) {
-                cur++;
-            }
+    public String getFromRow(JSONObject row, int counter) {
+        try {
+            //check if valid
+            return row.getJSONArray("c").getJSONObject(counter).optString("v");
+        } catch (JSONException ex) {
+            //exception for null values
+            return "";
         }
-        Values.add(value);
-        Values.add(cur);
-        return Values;
     }
 
     private void processJson(JSONObject object) {
@@ -44,35 +37,9 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
                 JSONObject row = rows.getJSONObject(row_id);
                 //counter for index
-                ArrayList Temp;
                 int id;
-                String name = "";
-                String shortdesc = "";
-                String isboolean = "";
-                String equipment = "";
-                String instructions = "";
-                String x = "";
                 int image;
-                int counter = 0;
 
-                Temp = add(x, counter, row);
-                name = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                shortdesc = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                isboolean = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                equipment = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                instructions = Temp.get(0).toString();
 
                 image = 0;
                 image = R.drawable.activities; // Temporary fix until we have images
@@ -80,11 +47,11 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 //creates a new instance of exercise for each exercise type
                 ExerciseItemFormat exercise = new ExerciseItemFormat(
                         row_id,
-                        name,
-                        isboolean,
-                        shortdesc,
-                        equipment,
-                        instructions,
+                        getFromRow(row, 0),
+                        getFromRow(row, 1),
+                        getFromRow(row, 2),
+                        getFromRow(row, 3),
+                        getFromRow(row, 4),
                         image);
                 exerciseList.add(exercise);
             }

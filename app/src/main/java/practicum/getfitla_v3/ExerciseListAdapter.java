@@ -38,12 +38,12 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
         holder.textViewTitle.setText(exercise.getName());
         holder.textViewEquipment.setText(exercise.getEquipment());
-        holder.textViewShortDesc.setText(exercise.getIsboolean());
+        holder.textViewShortDesc.setText(exercise.getShortdesc());
     }
 
     @Override
     public int getItemCount() {
-        return fullList == null ? 0 : fullList.size();
+        return fullList.size();
 
     }
 

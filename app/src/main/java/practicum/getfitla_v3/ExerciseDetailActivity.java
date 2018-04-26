@@ -6,13 +6,6 @@ import android.widget.TextView;
 
 public class ExerciseDetailActivity extends AppCompatActivity{
 
-    private String passedtitle;
-    private String passedshortdesc;
-    private String passedisboolean;
-    private String passedequipment;
-    private String passedinstructions;
-    private int passedimage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,18 +13,10 @@ public class ExerciseDetailActivity extends AppCompatActivity{
         Bundle data = getIntent().getExtras();
         ExerciseItemFormat CurItem = (ExerciseItemFormat) data.getParcelable("ExerciseInfo");
 
-
-        passedtitle = CurItem.getName();
-        passedshortdesc = CurItem.getShortdesc();
-        passedisboolean = CurItem.getIsboolean();
-        passedequipment = CurItem.getEquipment();
-        passedinstructions = CurItem.getInstructions();
-        passedimage = CurItem.getImage();
-
         TextView title = (TextView) findViewById(R.id.exercise_title);
-        title.setText(passedtitle);
+        title.setText(CurItem.getName());
         TextView guide = (TextView) findViewById(R.id.exercise_guide);
-        guide.setText(passedinstructions);
+        guide.setText(CurItem.getInstructions());
 
 
 

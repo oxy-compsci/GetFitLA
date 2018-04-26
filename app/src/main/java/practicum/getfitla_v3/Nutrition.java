@@ -25,25 +25,16 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
     //Creating a new list that will take object of type NutritionItemFormat, or specifically items that have been formatted
     public List<NutritionItemFormat> nutritionList = new ArrayList<>();
     private NutritionListAdapter mAdapter;
-    public ArrayList add(String value, int counter, JSONObject row) {
-        ArrayList Values = new ArrayList<>();
-        int cur;
-        cur = counter;
-        while (value == "") {
-            try {
-                //check if valid
-                value = row.getJSONArray("c").getJSONObject(cur).optString("v");
-                cur++;
-            } catch (JSONException ex) {
-                //exception for null values
-                cur++;
-            }
+    public String getFromRow(JSONObject row, int counter) {
+        try {
+            //check if valid
+            return row.getJSONArray("c").getJSONObject(counter).optString("v");
+        } catch (JSONException ex) {
+            //exception for null values
+            return "";
         }
-        //if valid values, add current index and values to the arraylist of answers
-        Values.add(value);
-        Values.add(cur);
-        return Values;
     }
+
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
@@ -51,69 +42,28 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
                 JSONObject row = rows.getJSONObject(row_id);
                 //initialize secondary counter to control for the index
-                int counter = 0;
                 //added try/catch exceptions because of null values in Json files
-                ArrayList Temp;
                 //just null values used to check if a valid value was found
-                String name = "";
-                String shortdesc = "";
-                int image;
-                String prepTime = "";
-                String servingSize = "";
-                String calories = "";
-                String equipment = "";
-                String process = "";
                 String ingredients = "";
                 String rating  = "";
                 String price = "";
                 String x = "";
                 //temporary holding arraylist of answers
-                Temp = add(x, counter,row);
-                //set passed variable to the needed value in the arraylist
-                name = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
 
-                Temp = add(x, counter, row);
-                prepTime = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                servingSize = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                calories = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                equipment = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                ingredients = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                process = Temp.get(0).toString();
-                counter = Integer.parseInt(Temp.get(1).toString());
-
-                Temp = add(x, counter, row);
-                shortdesc = Temp.get(0).toString();
-
-                image = 0;
-                image = R.drawable.nutrition; // Temporary fix until we have images
+// Temporary fix until we have images
+                int image = R.drawable.nutrition;
 
                 NutritionItemFormat nutrition = new NutritionItemFormat(
                         row_id,
-                        name,
-                        shortdesc,
+                        getFromRow(row, 0), // name
+                        getFromRow(row, 7), // shortdesc
                         image,
-                        prepTime,
-                        servingSize,
-                        calories,
-                        equipment,
-                        process,
-                        ingredients,
+                        getFromRow(row, 1), // prepTime
+                        getFromRow(row, 2), // servingSize
+                        getFromRow(row, 3), // calories
+                        getFromRow(row, 4), // equipment
+                        getFromRow(row, 6), // process
+                        getFromRow(row, 5), // ingredients
                         rating,
                         price
                 );

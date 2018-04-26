@@ -30,7 +30,6 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     public itemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mtcx);
         View view = inflater.inflate(R.layout.n_list_layout, null);
-        // itemViewHolder holder = new itemViewHolder(view);
         //creates a viewholder by returning an instance of the viewholder class
         return new itemViewHolder(view);
     }
@@ -48,7 +47,7 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     @Override
     public int getItemCount() {
         //returns list size
-        return fullList == null ? 0 : fullList.size();
+        return fullList.size();
     }
 
     //Adaptor takes viewholder located within List_adaptor
