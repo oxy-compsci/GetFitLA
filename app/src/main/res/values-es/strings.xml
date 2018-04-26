@@ -8,4 +8,5 @@
     <string name="button_breakfast">Desayuno</string>
     <string name="button_lunch">Almuerzo</string>
     <string name="button_dinner">Cena</string>
+    <string name="kml_url">http://www.google.com/maps/d/u/0/kml?forcekml=1&amp;mid=1cjPALrvPUwquU8gI7yAULXLyjPE</string>
 </resources>
