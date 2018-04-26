@@ -37,7 +37,6 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
                 JSONObject row = rows.getJSONObject(row_id);
                 //counter for index
-                int id;
                 int image;
 
 
