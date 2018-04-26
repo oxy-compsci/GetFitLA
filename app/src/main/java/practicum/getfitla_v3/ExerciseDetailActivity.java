@@ -18,13 +18,6 @@ public class ExerciseDetailActivity extends AppCompatActivity{
         TextView guide = (TextView) findViewById(R.id.exercise_guide);
         guide.setText(CurItem.getInstructions());
 
-
-
-
-
-
-
     }
-
 
 }
