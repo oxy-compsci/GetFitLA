@@ -3,6 +3,7 @@ package practicum.getfitla_v3;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -20,13 +21,21 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.maps.android.data.kml.KmlContainer;
 import com.google.maps.android.data.kml.KmlLayer;
+import com.google.maps.android.data.kml.KmlPlacemark;
+import com.google.maps.android.data.kml.KmlPoint;
 
 import org.xmlpull.v1.XmlPullParserException;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,
         OnMyLocationButtonClickListener,
@@ -68,22 +77,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = googleMap;
         mMap.setOnMyLocationButtonClickListener(this);
         mMap.setOnMyLocationClickListener(this);
-        updateLocationUI();
         // Turn on the My Location layer
         enableMyLocation();
         // Get location, and center camera on that location
         getDeviceLocation();
 
         //Add KML Layer
-        KmlLayer layer = null;
-        try {
-            layer = new KmlLayer(mMap, R.raw.engmap, getApplicationContext());
-            layer.addLayerToMap();
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        retrieveFileFromUrl();
     }
 
     @Override
@@ -99,7 +99,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return false;
     }
 
-    // Enables the My Location layer if the fine location permission has been granted.
+
+    // Enables the My Location layer, which checks if the location permission has been given to the app, and otherwise requests that permission
     private void enableMyLocation() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -114,26 +115,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    // TODO: see if this is redundant
-    private void updateLocationUI() {
-        if (mMap == null) {
-            return;
-        }
-        try {
-            if (mLocationPermissionGranted) {
-                mMap.setMyLocationEnabled(true);
-                mMap.getUiSettings().setMyLocationButtonEnabled(true);
-            } else {
-                mMap.setMyLocationEnabled(false);
-                mMap.getUiSettings().setMyLocationButtonEnabled(false);
-                lastLocation = null;
-                enableMyLocation();
-            }
-        } catch (SecurityException e) {
-            Log.e("Exception: %s", e.getMessage());
-        }
-    }
-
+    // Checks the result of the dialogue box that pops up prompting user if they want to allow the app to access the device’s location
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode != LOCATION_PERMISSION_REQUEST_CODE) {
@@ -165,6 +147,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
     }
 
+    // Gets the device’s location and centers the “camera” (i.e. what the map is showing) on the device’s location
     private void getDeviceLocation() {
     /*
      * Get the best and most recent location of the device, which may be null in rare
@@ -199,4 +182,79 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
+    // Sets in motion a few functions that downloads the KML file from the map provided by Prof. Raney’s team.
+    private void retrieveFileFromUrl() {
+        new DownloadKmlFile(getString(R.string.kml_url)).execute();
+    }
+
+
+    private class DownloadKmlFile extends AsyncTask<String, Void, byte[]> {
+        private final String mUrl;
+
+        public DownloadKmlFile(String url) {
+            mUrl = url;
+        }
+
+        protected byte[] doInBackground(String... params) {
+            try {
+                InputStream is =  new URL(mUrl).openStream();
+                ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+                int nRead;
+                byte[] data = new byte[16384];
+                while ((nRead = is.read(data, 0, data.length)) != -1) {
+                    buffer.write(data, 0, nRead);
+                    Log.v(TAG, data.toString());
+                }
+                buffer.flush();
+                return buffer.toByteArray();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        protected void onPostExecute(byte[] byteArr) {
+            try {
+
+                KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.engmap,
+                        getApplicationContext());
+                kmlLayer.addLayerToMap();
+
+
+                // Grabs all of the placemarks from the KmlLayer object and places them on the map
+                for (KmlContainer container : kmlLayer.getContainers()) {
+                    for (KmlContainer nestedContainer : container.getContainers()) {
+                        for (KmlPlacemark placemark : nestedContainer.getPlacemarks()) {
+                            if (placemark.getGeometry().getGeometryType().equals("Point")) {
+
+                                KmlPoint point = (KmlPoint) placemark.getGeometry();
+                                LatLng latLng = new LatLng(point.getGeometryObject().latitude, point.getGeometryObject().longitude);
+
+                                String title = "";
+                                if (placemark.hasProperty("name")) {
+                                    title = placemark.getProperty("name");
+                                }
+
+                                String snippet = "";
+                                if (placemark.hasProperty("description")) {
+                                    snippet = placemark.getProperty("description");
+                                }
+
+                                Marker marker = mMap.addMarker(new MarkerOptions()
+                                        .position(latLng)
+                                        .title(title)
+                                        .snippet(snippet));
+                            }
+                        }
+                    }
+                }
+
+                kmlLayer.removeLayerFromMap();
+            } catch (XmlPullParserException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
