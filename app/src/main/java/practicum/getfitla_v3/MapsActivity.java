@@ -20,6 +20,7 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -141,7 +142,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             mPermissionDenied = false;
         }
     }
-    //Displays a dialog with error message explaining that the location permission is missing.
+    // Displays a dialog with error message explaining that the location permission is missing.
     private void showMissingPermissionError() {
         PermissionUtils.PermissionDeniedDialog
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
@@ -222,8 +223,24 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
                 // Grabs all of the placemarks from the KmlLayer object and places them on the map
+                float hue = 0;
                 for (KmlContainer container : kmlLayer.getContainers()) {
                     for (KmlContainer nestedContainer : container.getContainers()) {
+                        if(nestedContainer.hasProperty("name")) {
+                            if(nestedContainer.getProperty("name").equals("<![CDATA[Farmer's Markets]]>")) {
+                                hue = 0;
+                            } else if(nestedContainer.getProperty("name").equals("Bike Paths")) {
+                                hue = 300;
+                            } else if(nestedContainer.getProperty("name").equals("<![CDATA[Walking & Hiking Trails]]>")) {
+                                hue = 60;
+                            } else if(nestedContainer.getProperty("name").equals("Parks")) {
+                                hue = 120;
+                            } else if(nestedContainer.getProperty("name").equals("Urban Staircases")) {
+                                hue = 240;
+                            } else {
+                                hue = 0;
+                            }
+                        }
                         for (KmlPlacemark placemark : nestedContainer.getPlacemarks()) {
                             if (placemark.getGeometry().getGeometryType().equals("Point")) {
 
@@ -243,7 +260,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 Marker marker = mMap.addMarker(new MarkerOptions()
                                         .position(latLng)
                                         .title(title)
-                                        .snippet(snippet));
+                                        .snippet(snippet)
+                                        .icon(BitmapDescriptorFactory.defaultMarker(hue)));
                             }
                         }
                     }

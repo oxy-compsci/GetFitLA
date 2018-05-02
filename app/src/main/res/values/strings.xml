@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GetFitLA_v3</string>
+    <string name="app_name">GetFitLA</string>
     <string name="Activities">Activities</string>
     <string name="Nutrition">Nutrition</string>
     <string name="Exercise">Exercise</string>
