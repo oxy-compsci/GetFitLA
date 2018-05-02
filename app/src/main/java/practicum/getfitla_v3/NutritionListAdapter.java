@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
-
 /**
  * This is the class that binds the raw data to a specific item held within the recyclerview.
  * Following link(s) were used to implement the Adapter
@@ -31,7 +30,6 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     public itemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mtcx);
         View view = inflater.inflate(R.layout.n_list_layout, null);
-        // itemViewHolder holder = new itemViewHolder(view);
         //creates a viewholder by returning an instance of the viewholder class
         return new itemViewHolder(view);
     }
@@ -40,11 +38,8 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     public void onBindViewHolder(itemViewHolder holder, int position) {
         NutritionItemFormat nutrition = fullList.get(position);
         //binds data to our viewholder
-
         holder.textViewTitle.setText(nutrition.getName());
         holder.textViewShortDesc.setText(nutrition.getShortdesc());
-        //holder.textViewRating.setText(String.valueOf(nutrition.getRating()));
-        //holder.textViewPrice.setText(String.valueOf(nutrition.getPrice()));
         holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(nutrition.getImage()));
     }
 
@@ -52,21 +47,19 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     @Override
     public int getItemCount() {
         //returns list size
-        return fullList == null ? 0 : fullList.size();
+        return fullList.size();
     }
 
     //Adaptor takes viewholder located within List_adaptor
     public void setClickListener(ItemClickListener itemClickListener) {
         //Passing instance of clicklistener to a short name
         this.clickListener = itemClickListener;
-
     }
 
     public class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         //This is the actual class that contains all the relevant information in a given entry
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc;
-
 
         public itemViewHolder(View itemView) {
             super(itemView);
@@ -92,9 +85,6 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
             } else {
                 clickListener.onClick(view, getAdapterPosition());
             }
-
-
         }
-
     }
 }

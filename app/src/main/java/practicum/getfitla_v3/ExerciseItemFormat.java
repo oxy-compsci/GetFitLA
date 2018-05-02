@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 //Formats Information to be easily called
 public class ExerciseItemFormat implements Parcelable {
+
     private int id;
     private String name;
     private String shortdesc;
@@ -12,7 +13,6 @@ public class ExerciseItemFormat implements Parcelable {
     private String equipment;
     private String instructions;
     private int image;
-
 
     public ExerciseItemFormat(int id, String name,
                               String shortdesc, String isboolean, String equipment, String instructions, int image) {
@@ -29,27 +29,21 @@ public class ExerciseItemFormat implements Parcelable {
     public int getId() {
         return id;
     }
-
     public String getName() {
         return name;
     }
-
     public String getShortdesc() {
         return shortdesc;
     }
-
     public String getIsboolean() {
         return isboolean;
     }
-
     public String getEquipment() {
         return equipment;
     }
-
     public String getInstructions() {
         return instructions;
     }
-
     public int getImage() {
         return image;
     }
@@ -69,7 +63,6 @@ public class ExerciseItemFormat implements Parcelable {
         dest.writeString(this.equipment);
         dest.writeString(this.instructions);
         dest.writeInt(this.image);
-
     }
 
     protected ExerciseItemFormat(Parcel in) {
@@ -80,7 +73,6 @@ public class ExerciseItemFormat implements Parcelable {
         this.equipment = in.readString();
         this.instructions = in.readString();
         this.image = in.readInt();
-
     }
 
     public static final Parcelable.Creator<ExerciseItemFormat> CREATOR = new Parcelable.Creator<ExerciseItemFormat>() {
