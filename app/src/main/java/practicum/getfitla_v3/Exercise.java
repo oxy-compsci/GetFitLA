@@ -15,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
+import android.content.Intent;
 
 
 public class Exercise extends AppCompatActivity implements ItemClickListener {
