@@ -16,8 +16,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 import android.content.Intent;
-
-
 public class Exercise extends AppCompatActivity implements ItemClickListener {
     static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc";
     //creating instances of adaptor to link to the recyclerview
@@ -26,7 +24,6 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
     public ArrayList<ExerciseItemFormat> filteredList = new ArrayList<>();
     public ArrayList<ExerciseItemFormat> exerciseList = new ArrayList<>();
     private ExerciseListAdapter mAdapter;
-
     public String getFromRow(JSONObject row, int counter) {
         try {
             //check if valid
@@ -36,7 +33,6 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
             return "";
         }
     }
-
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
@@ -44,11 +40,8 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                 JSONObject row = rows.getJSONObject(row_id);
                 //counter for index
                 int image;
-
-
                 image = 0;
                 image = R.drawable.activities; // Temporary fix until we have images
-
                 //creates a new instance of exercise for each exercise type
                 ExerciseItemFormat exercise = new ExerciseItemFormat(
                         row_id,
@@ -60,13 +53,11 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                         image);
                 exerciseList.add(exercise);
             }
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
         setupSorter();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,7 +81,6 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
             }
         }).execute(EXERCISE_SHEET_URL);
     }
-
     @Override
     public void onClick(View view, int position) {
         ExerciseItemFormat current = exerciseList.get(position);
@@ -109,20 +99,16 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
         else if(itemtoadd == 2) {
             filterValue = "FALSE";
         }
-
         filteredList.clear();
         filteredList.addAll(Filter.filterThisExercise(exerciseList, filterValue));
-        System.out.println(filteredList.size());
         mAdapter.notifyDataSetChanged();
     }
     private void setupSorter(){
-
         final Spinner exerciseSpinner = findViewById(R.id.exerciseSpinner);
         ArrayAdapter<CharSequence> exerciseSpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.exerciseBooleans, android.R.layout.simple_spinner_item);
         exerciseSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         exerciseSpinner.setAdapter(exerciseSpinnerAdapter);
         exerciseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 filteredList.clear();

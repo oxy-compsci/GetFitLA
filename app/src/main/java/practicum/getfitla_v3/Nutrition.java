@@ -1,5 +1,4 @@
 package practicum.getfitla_v3;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,11 +16,9 @@ import org.json.JSONObject;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * An activity that displays a the list of Recipe Items
  */
-
 public class Nutrition extends AppCompatActivity implements ItemClickListener {
     static final String NutritionSheetUrl = "https://spreadsheets.google.com/tq?key=1a6YXr5Tf_nREmb9byNWLLtpKZEfIUPnDq1JLsaMXWig";
     //Creating instance of recyclerview
@@ -39,7 +36,6 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
             return "";
         }
     }
-
     private void processJson(JSONObject object) {
         try {
             JSONArray rows = object.getJSONArray("rows");
@@ -54,10 +50,8 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
                 String price = "";
                 String x = "";
                 //temporary holding arraylist of answers
-
 // Temporary fix until we have images
                 int image = R.drawable.nutrition;
-
                 NutritionItemFormat nutrition = new NutritionItemFormat(
                         row_id,
                         getFromRow(row, 0), // name
@@ -72,7 +66,6 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
                         rating,
                         price,
                         getFromRow(row, 8) // category
-
                 );
                 nutritionList.add(nutrition);
             }
@@ -80,7 +73,6 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
             e.printStackTrace();
         }
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,7 +101,6 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
             }
         }).execute(NutritionSheetUrl);
     }
-
     @Override
     public void onClick(View view, int position) {
         NutritionItemFormat current = nutritionList.get(position);
@@ -133,17 +124,14 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
         }
         filteredList.clear();
         filteredList.addAll(Filter.filterThis(nutritionList, filterValue));
-        System.out.println(filteredList.size());
         mAdapter.notifyDataSetChanged();
     }
     private void setupSorter(){
-
         final Spinner nutritionSpinner = findViewById(R.id.nutritionSpinner);
         ArrayAdapter<CharSequence> nutritionSpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.nutritionCategories, android.R.layout.simple_spinner_item);
         nutritionSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         nutritionSpinner.setAdapter(nutritionSpinnerAdapter);
         nutritionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 filteredList.clear();
