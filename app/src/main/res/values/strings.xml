@@ -33,5 +33,15 @@
     <string name="Recipe_Process">1) Put the veggie in the pot. <br/> 2) Put the meats in the pan.</string>
     <string name="Exercise_Title">Exercise</string>
     <string name="Exercise_Instructions">This is how you do the exercise.</string>
-
+    <string-array name ="nutritionCategories">
+        <item> No Filter</item>
+        <item> Breakfasts </item>
+        <item> Lunches </item>
+        <item> Dinners </item>
+    </string-array>
+    <string-array name="exerciseBooleans">
+        <item> No Filter</item>
+        <item> Equipment</item>
+        <item> No Equipment</item>
+    </string-array>
 </resources>
