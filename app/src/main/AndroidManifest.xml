@@ -13,6 +13,7 @@
 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -34,7 +35,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,6 +53,7 @@
         <activity android:name=".Exercise" />
         <activity android:name=".Nutrition" />
         <activity android:name=".NutritionDetailActivity"/>
+        <activity android:name=".ExerciseDetailActivity" />
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">

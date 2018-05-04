@@ -15,7 +15,6 @@ import android.widget.Toast;
  * Utility class for access to runtime permissions.
  */
 public abstract class PermissionUtils {
-
     /**
      * Requests the fine location permission. If a rationale with an additional explanation should
      * be shown to the user, displays a dialog that triggers the request.
@@ -29,7 +28,6 @@ public abstract class PermissionUtils {
         } else {
             // Location permission has not been granted yet, request it.
             ActivityCompat.requestPermissions(activity, new String[]{permission}, requestId);
-
         }
     }
 
@@ -55,7 +53,6 @@ public abstract class PermissionUtils {
     public static class PermissionDeniedDialog extends DialogFragment {
 
         private static final String ARGUMENT_FINISH_ACTIVITY = "finish";
-
         private boolean mFinishActivity = false;
 
         /**
@@ -103,9 +100,7 @@ public abstract class PermissionUtils {
     public static class RationaleDialog extends DialogFragment {
 
         private static final String ARGUMENT_PERMISSION_REQUEST_CODE = "requestCode";
-
         private static final String ARGUMENT_FINISH_ACTIVITY = "finish";
-
         private boolean mFinishActivity = false;
 
         /**
