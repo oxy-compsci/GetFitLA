@@ -1,0 +1,84 @@
+buildscript {
+  ext.versions = [
+    'compileSdk': 'android-P',
+    'minSdk': 14,
+    'targetSdk': 'P',
+    'sourceCompatibility': JavaVersion.VERSION_1_7,
+    'targetCompatibility': JavaVersion.VERSION_1_7,
+    'okhttp': '3.10.0',
+    'supportLibrary': '28.0.0-alpha1'
+  ]
+
+  ext.deps = [
+    androidPlugin: 'com.android.tools.build:gradle:3.1.1',
+    okhttp: "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+    mockWebServer: "com.squareup.okhttp3:mockwebserver:${versions.okhttp}",
+    pollexor: 'com.squareup:pollexor:2.0.4',
+    supportCompat: "com.android.support:support-compat:${versions.supportLibrary}",
+    supportFragment: "com.android.support:support-fragment:${versions.supportLibrary}",
+    supportAnnotations: "com.android.support:support-annotations:${versions.supportLibrary}",
+    supportExifInterface: "com.android.support:exifinterface:${versions.supportLibrary}",
+    errorProne: "com.google.errorprone:error_prone_core:2.2.0",
+    junit: 'junit:junit:4.12',
+    truth: 'com.google.truth:truth:0.40',
+    robolectric: 'org.robolectric:robolectric:3.1',
+    mockito: 'org.mockito:mockito-core:2.18.0'
+  ]
+
+  ext.isCi = "true" == System.getenv('CI')
+
+  repositories {
+    google()
+    maven { url 'https://plugins.gradle.org/m2/' }
+  }
+
+  dependencies {
+    classpath deps.androidPlugin
+    classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+    classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.13'
+  }
+}
+
+apply plugin: 'com.github.ben-manes.versions'
+
+subprojects {
+  repositories {
+    google()
+    jcenter()
+  }
+
+  tasks.withType(Test) {
+    testLogging {
+      events "failed"
+      exceptionFormat "full"
+      showExceptions true
+      showStackTraces true
+      showCauses true
+    }
+  }
+
+  plugins.apply('checkstyle')
+
+  task('checkstyle', type: Checkstyle) {
+    configFile rootProject.file('checkstyle.xml')
+    source 'src/main/java'
+    ignoreFailures false
+    showViolations true
+    include '**/*.java'
+
+    classpath = files()
+  }
+
+  group = GROUP
+  version = VERSION_NAME
+
+  afterEvaluate {
+    tasks.findByName('check').dependsOn('checkstyle')
+  }
+
+  apply plugin: 'net.ltgt.errorprone'
+
+  dependencies {
+    errorprone deps.errorProne
+  }
+}

@@ -28,8 +28,9 @@
             android:textSize="36sp" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:id="@+id/nutrition_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_margin="1dp"
             android:layout_weight="1"
             app:srcCompat="@android:drawable/btn_star" />

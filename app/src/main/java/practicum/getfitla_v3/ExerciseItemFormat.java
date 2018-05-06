@@ -1,7 +1,9 @@
 package practicum.getfitla_v3;
 
+import android.media.Image;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.graphics.Bitmap;
 
 //Formats Information to be easily called
 public class ExerciseItemFormat implements Parcelable {
@@ -12,10 +14,10 @@ public class ExerciseItemFormat implements Parcelable {
     private String isboolean; //change this name
     private String equipment;
     private String instructions;
-    private int image;
+    private String image;
 
     public ExerciseItemFormat(int id, String name,
-                              String shortdesc, String isboolean, String equipment, String instructions, int image) {
+                              String shortdesc, String isboolean, String equipment, String instructions, String image) {
         this.id = id;
         this.name = name;
         this.shortdesc = shortdesc;
@@ -44,7 +46,7 @@ public class ExerciseItemFormat implements Parcelable {
     public String getInstructions() {
         return instructions;
     }
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
@@ -62,7 +64,7 @@ public class ExerciseItemFormat implements Parcelable {
         dest.writeString(this.isboolean);
         dest.writeString(this.equipment);
         dest.writeString(this.instructions);
-        dest.writeInt(this.image);
+        dest.writeString(this.image);
     }
 
     protected ExerciseItemFormat(Parcel in) {
@@ -72,7 +74,7 @@ public class ExerciseItemFormat implements Parcelable {
         this.isboolean = in.readString();
         this.equipment = in.readString();
         this.instructions = in.readString();
-        this.image = in.readInt();
+        this.image = in.readString();
     }
 
     public static final Parcelable.Creator<ExerciseItemFormat> CREATOR = new Parcelable.Creator<ExerciseItemFormat>() {
