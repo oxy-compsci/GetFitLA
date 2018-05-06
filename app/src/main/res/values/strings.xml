@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GetFitLA_v3</string>
+    <string name="app_name">GetFitLA</string>
     <string name="Activities">Activities</string>
     <string name="Nutrition">Nutrition</string>
     <string name="Exercise">Exercise</string>
@@ -20,6 +20,7 @@
     <string name="permission_rationale_location">Access to the location service is required to
         demonstrate the \'my location\' feature, which shows your current location on the map.</string>
     <string name="Title" translatable="false">Get Fit L.A.</string>
+    <string name="kml_url">http://www.google.com/maps/d/u/0/kml?forcekml=1&amp;mid=1LuVbYbhZpTtSep4GIRD0BEXWeKc</string>
 
     <!-- Begin strings that take in data to from adapter to be used in the detailed activities-->
 
