@@ -15,12 +15,13 @@ public class NutritionItemFormat implements Parcelable {
     private String equipment;
     private String process;
     private String ingredients;
+    public String category;
 
     public NutritionItemFormat(int id, String name,
                                String shortdesc,
                                String image, String preptime, String servingSize, String calories,
                                String equipment, String process, String ingredients, String rating,
-                               String price) {
+                               String price, String category) {
         this.id = id;
         this.name = name;
         this.shortdesc = shortdesc;
@@ -32,6 +33,7 @@ public class NutritionItemFormat implements Parcelable {
         this.equipment = equipment;
         this.process = process;
         this.ingredients = ingredients;
+        this.category = category;
     }
 
     public int getId() {
@@ -87,6 +89,7 @@ public class NutritionItemFormat implements Parcelable {
         dest.writeString(this.equipment);
         dest.writeString(this.process);
         dest.writeString(this.ingredients);
+        dest.writeString(this.category);
     }
 
     protected NutritionItemFormat(Parcel in) {
@@ -101,6 +104,7 @@ public class NutritionItemFormat implements Parcelable {
         this.equipment = in.readString();
         this.process = in.readString();
         this.ingredients = in.readString();
+        this.category = in.readString();
     }
 
     public static final Parcelable.Creator<NutritionItemFormat> CREATOR = new Parcelable.Creator<NutritionItemFormat>() {

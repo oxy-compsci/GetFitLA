@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="practicum.getfitla_v3">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <!--
      The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
      Google Maps Android API v2, but you must specify either coarse or fine
@@ -38,12 +41,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Exercise" />
-        <activity android:name=".Nutrition" />
+        <activity android:name=".Exercise"/>
+        <activity android:name=".Nutrition"/>
         <activity android:name=".NutritionDetailActivity"/>
         <activity android:name=".ExerciseDetailActivity" />
-        <activity
-            android:name=".MapsActivity"
+        <activity android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

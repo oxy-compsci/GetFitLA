@@ -1,5 +1,6 @@
 package practicum.getfitla_v3;
-
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.media.Image;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,7 +8,6 @@ import android.graphics.Bitmap;
 
 //Formats Information to be easily called
 public class ExerciseItemFormat implements Parcelable {
-
     private int id;
     private String name;
     private String shortdesc;
@@ -15,7 +15,7 @@ public class ExerciseItemFormat implements Parcelable {
     private String equipment;
     private String instructions;
     private String image;
-
+  
     public ExerciseItemFormat(int id, String name,
                               String shortdesc, String isboolean, String equipment, String instructions, String image) {
         this.id = id;
@@ -25,9 +25,7 @@ public class ExerciseItemFormat implements Parcelable {
         this.equipment = equipment;
         this.instructions = instructions;
         this.image = image;
-
     }
-
     public int getId() {
         return id;
     }
@@ -49,13 +47,11 @@ public class ExerciseItemFormat implements Parcelable {
     public String getImage() {
         return image;
     }
-
-    //begin parcel shit
+    //begin parcel stuff
     @Override
     public int describeContents() {
         return 0;
     }
-
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(this.id);
@@ -66,7 +62,6 @@ public class ExerciseItemFormat implements Parcelable {
         dest.writeString(this.instructions);
         dest.writeString(this.image);
     }
-
     protected ExerciseItemFormat(Parcel in) {
         this.id = in.readInt();
         this.name = in.readString();
@@ -76,13 +71,11 @@ public class ExerciseItemFormat implements Parcelable {
         this.instructions = in.readString();
         this.image = in.readString();
     }
-
     public static final Parcelable.Creator<ExerciseItemFormat> CREATOR = new Parcelable.Creator<ExerciseItemFormat>() {
         @Override
         public ExerciseItemFormat createFromParcel(Parcel source) {
             return new ExerciseItemFormat(source);
         }
-
         @Override
         public ExerciseItemFormat[] newArray(int size) {
             return new ExerciseItemFormat[size];
