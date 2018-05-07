@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class ExerciseDetailActivity extends AppCompatActivity{
+public class ExerciseDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,8 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.squareup.picasso.Picasso;
+
 import java.util.List;
+
 /**
  * This is the class that binds the raw data to a specific item held within the recyclerview.
  * Following link(s) were used to implement the Adapter
