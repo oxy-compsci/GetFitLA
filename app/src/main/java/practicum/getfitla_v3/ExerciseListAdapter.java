@@ -1,17 +1,16 @@
 package practicum.getfitla_v3;
 
 import android.content.Context;
-import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.squareup.picasso.Picasso;
-import java.util.List;
 
-import android.graphics.drawable.Drawable;
+import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 //For more information about the code, please check out the NutritionListAdapter as they are functionally identical
 
@@ -56,7 +55,7 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
 
     class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageview;
-        TextView textViewTitle, textViewShortDesc,  textViewEquipment;
+        TextView textViewTitle, textViewShortDesc, textViewEquipment;
 
         public itemViewHolder(View itemView) {
             super(itemView);

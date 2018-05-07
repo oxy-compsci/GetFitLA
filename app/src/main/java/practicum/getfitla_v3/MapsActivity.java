@@ -22,7 +22,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -142,6 +141,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             mPermissionDenied = false;
         }
     }
+
     // Displays a dialog with error message explaining that the location permission is missing.
     private void showMissingPermissionError() {
         PermissionUtils.PermissionDeniedDialog
@@ -150,10 +150,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     // Gets the device’s location and centers the “camera” (i.e. what the map is showing) on the device’s location
     private void getDeviceLocation() {
-    /*
-     * Get the best and most recent location of the device, which may be null in rare
-     * cases when a location is not available.
-     */
+        /*
+         * Get the best and most recent location of the device, which may be null in rare
+         * cases when a location is not available.
+         */
         try {
             if (mLocationPermissionGranted) {
                 Task locationResult = mFusedLocationProviderClient.getLastLocation();
@@ -198,7 +198,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         protected byte[] doInBackground(String... params) {
             try {
-                InputStream is =  new URL(mUrl).openStream();
+                InputStream is = new URL(mUrl).openStream();
                 ByteArrayOutputStream buffer = new ByteArrayOutputStream();
                 int nRead;
                 byte[] data = new byte[16384];
@@ -257,7 +257,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                     snippet = placemark.getProperty("description");
                                 }
 
-                                Marker marker = mMap.addMarker(new MarkerOptions()
+                                mMap.addMarker(new MarkerOptions()
                                         .position(latLng)
                                         .title(title)
                                         .snippet(snippet)

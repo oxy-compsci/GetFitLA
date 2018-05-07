@@ -1,4 +1,5 @@
 package practicum.getfitla_v3;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -39,33 +40,43 @@ public class NutritionItemFormat implements Parcelable {
     public int getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
+
     public String getShortdesc() {
         return shortdesc;
     }
+
     public String getPrice() {
         return price;
     }
+
     public String getImage() {
         return image;
     }
+
     public String getPrepTime() {
         return prepTime;
     }
+
     public String getServingSize() {
         return servingSize;
     }
+
     public String getCalories() {
         return calories;
     }
+
     public String getEquipment() {
         return equipment;
     }
+
     public String getProcess() {
         return process;
     }
+
     public String getIngredients() {
         return ingredients;
     }
