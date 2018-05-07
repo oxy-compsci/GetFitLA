@@ -12,8 +12,6 @@ import android.widget.Spinner;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -50,13 +48,12 @@ public class Nutrition extends AppCompatActivity implements ItemClickListener {
                 String price = "";
                 String x = "";
                 //temporary holding arraylist of answers
-// Temporary fix until we have images
-                int image = R.drawable.nutrition;
+              
                 NutritionItemFormat nutrition = new NutritionItemFormat(
                         row_id,
                         getFromRow(row, 0), // name
                         getFromRow(row, 7), // shortdesc
-                        image,
+                        getFromRow(row, 9), //image
                         getFromRow(row, 1), // prepTime
                         getFromRow(row, 2), // servingSize
                         getFromRow(row, 3), // calories

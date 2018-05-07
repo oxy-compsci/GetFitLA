@@ -8,7 +8,7 @@ public class NutritionItemFormat implements Parcelable {
     private String name;
     private String shortdesc;
     private String price;
-    private int image;
+    private String image;
     private String prepTime;
     private String servingSize;
     private String calories;
@@ -19,7 +19,7 @@ public class NutritionItemFormat implements Parcelable {
 
     public NutritionItemFormat(int id, String name,
                                String shortdesc,
-                               int image, String preptime, String servingSize, String calories,
+                               String image, String preptime, String servingSize, String calories,
                                String equipment, String process, String ingredients, String rating,
                                String price, String category) {
         this.id = id;
@@ -48,7 +48,7 @@ public class NutritionItemFormat implements Parcelable {
     public String getPrice() {
         return price;
     }
-    public int getImage() {
+    public String getImage() {
         return image;
     }
     public String getPrepTime() {
@@ -82,7 +82,7 @@ public class NutritionItemFormat implements Parcelable {
         dest.writeString(this.name);
         dest.writeString(this.shortdesc);
         dest.writeString(this.price);
-        dest.writeInt(this.image);
+        dest.writeString(this.image);
         dest.writeString(this.prepTime);
         dest.writeString(this.servingSize);
         dest.writeString(this.calories);
@@ -97,7 +97,7 @@ public class NutritionItemFormat implements Parcelable {
         this.name = in.readString();
         this.shortdesc = in.readString();
         this.price = in.readString();
-        this.image = in.readInt();
+        this.image = in.readString();
         this.prepTime = in.readString();
         this.servingSize = in.readString();
         this.calories = in.readString();

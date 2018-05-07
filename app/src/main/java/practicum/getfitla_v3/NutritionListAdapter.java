@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.squareup.picasso.Picasso;
 import java.util.List;
 /**
  * This is the class that binds the raw data to a specific item held within the recyclerview.
@@ -40,7 +40,7 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
         //binds data to our viewholder
         holder.textViewTitle.setText(nutrition.getName());
         holder.textViewShortDesc.setText(nutrition.getShortdesc());
-        holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(nutrition.getImage()));
+        Picasso.with(mtcx).load(nutrition.getImage()).into(holder.imageview);
     }
 
     //Matches the position with the size of list

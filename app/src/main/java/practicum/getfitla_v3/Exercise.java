@@ -15,7 +15,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
+
 import android.content.Intent;
+
+//Link advising how to format the image url for downloads
+//https://www.lmeservices.com/share-google-drive-files-via-url/
+
 public class Exercise extends AppCompatActivity implements ItemClickListener {
     static final String EXERCISE_SHEET_URL = "https://spreadsheets.google.com/tq?key=1jFTMl8k53itUpU2NAXjAIBbdEChwcVJ3N-b4mQYi4qc";
     //creating instances of adaptor to link to the recyclerview
@@ -34,14 +39,12 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
         }
     }
     private void processJson(JSONObject object) {
+
         try {
             JSONArray rows = object.getJSONArray("rows");
             for (int row_id = 0; row_id < rows.length(); ++row_id) {
                 JSONObject row = rows.getJSONObject(row_id);
-                //counter for index
-                int image;
-                image = 0;
-                image = R.drawable.activities; // Temporary fix until we have images
+              
                 //creates a new instance of exercise for each exercise type
                 ExerciseItemFormat exercise = new ExerciseItemFormat(
                         row_id,
@@ -50,7 +53,8 @@ public class Exercise extends AppCompatActivity implements ItemClickListener {
                         getFromRow(row, 2),
                         getFromRow(row, 3),
                         getFromRow(row, 4),
-                        image);
+                        getFromRow(row, 5)
+                );
                 exerciseList.add(exercise);
             }
         } catch (JSONException e) {

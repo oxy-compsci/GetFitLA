@@ -1,17 +1,19 @@
 package practicum.getfitla_v3;
 
 import android.content.Context;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.squareup.picasso.Picasso;
 import java.util.List;
 
+import android.graphics.drawable.Drawable;
+
 //For more information about the code, please check out the NutritionListAdapter as they are functionally identical
-//FOR SOME REASON ISBOOLEAN IS SWITCHED WITH GET BOOLEN
 
 public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapter.itemViewHolder> {
 
@@ -35,7 +37,7 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
     @Override
     public void onBindViewHolder(itemViewHolder holder, int position) {
         ExerciseItemFormat exercise = fullList.get(position);
-        holder.imageview.setImageDrawable(mtcx.getResources().getDrawable(exercise.getImage()));
+        Picasso.with(mtcx).load(exercise.getImage()).into(holder.imageview);
         holder.textViewTitle.setText(exercise.getName());
         holder.textViewEquipment.setText(exercise.getEquipment());
         holder.textViewShortDesc.setText(exercise.getShortdesc());
@@ -52,7 +54,6 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
 
     }
 
-
     class itemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageview;
         TextView textViewTitle, textViewShortDesc,  textViewEquipment;
@@ -62,7 +63,8 @@ public class ExerciseListAdapter extends RecyclerView.Adapter<ExerciseListAdapte
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
             textViewEquipment = itemView.findViewById(R.id.textViewEquipment);
-            imageview = itemView.findViewById(R.id.imageView);
+            //where the current image holder is pasted into the layout
+            imageview = itemView.findViewById(R.id.exercise_thumbnail);
             itemView.setTag(itemView);
             itemView.setOnClickListener(this);
         }

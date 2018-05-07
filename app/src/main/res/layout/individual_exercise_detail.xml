@@ -10,27 +10,29 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/holo_green_light">
+
+
+    <TextView
+        android:id="@+id/exercise_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/alegreya"
+        android:text="@string/Exercise_Title"
 
-
-        <TextView
-            android:id="@+id/exercise_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:fontFamily="@font/alegreya"
-            android:text="@string/Exercise_Title"
-
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_green_light"
-            android:textSize="36sp"/>
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_light"
+        android:textSize="36sp"/>
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:id="@+id/detail_gif"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_margin="1dp"
             android:layout_weight="1"
             app:srcCompat="@android:drawable/btn_star" />
@@ -42,18 +44,14 @@
 
             <TextView
                 android:id="@+id/exercise_guide"
-                android:layout_width="399dp"
-                android:layout_height="467dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="327dp"
-                android:layout_marginEnd="19dp"
-                android:layout_marginRight="19dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:fontFamily="@font/alegreya"
-                android:gravity="start"
-                android:textAlignment="viewStart"
-                android:textSize="18sp" />
+                android:background="@android:color/white"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:text="@string/Exercise_Instructions"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
