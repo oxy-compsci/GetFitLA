@@ -41,10 +41,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Exercise"/>
-        <activity android:name=".Nutrition"/>
-        <activity android:name=".NutritionDetailActivity"/>
-        <activity android:name=".ExerciseDetailActivity" />
+        <activity android:name=".Exercise"
+            android:label="@string/Exercise">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="practicum.getfitla_v3.MainActivity"/>
+        </activity>
+
+        <activity android:name=".Nutrition"
+            android:label="@string/Nutrition">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="practicum.getfitla_v3.MainActivity"/>
+        </activity>
+
+        <activity android:name=".NutritionDetailActivity"
+            android:label="@string/Nutrition">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="practicum.getfitla_v3.Nutrition"/>
+        </activity>
+
+        <activity android:name=".ExerciseDetailActivity"
+            android:label="@string/Exercise">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="practicum.getfitla_v3.Exercise"/>
+        </activity>
+
         <activity android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
             <meta-data
